@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>me_work.knit</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ThanasisN</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="data_display.html">
+    <span class="fa fa-chart-line"></span>
+     
+    Data display
+  </a>
+</li>
+<li>
+  <a href="me_work.html">
+    <span class="fa fa-person"></span>
+     
+    Me and my work
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-fire"></span>
+     
+    Interests
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="codding.html">Codding</a>
+    </li>
+    <li>
+      <a href="running.html">Running</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="links.html">
+    <span class="fa fa-globe"></span>
+     
+    on the web
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="education" class="section level2">
+<h2>Education</h2>
+<ul>
+<li><em><strong>Ph.D. degree</strong></em> <strong>2024</strong></li>
+</ul>
+<p>Thesis subject ‘Effects of aerosols and clouds at direct solar
+irradiance’ at Laboratory of Atmospheric Physics, Physics Department,
+Aristotle University of Thessaloniki.</p>
+<ul>
+<li><em><strong>Environmental Physics Master’s degree</strong></em>
+<strong>2014</strong></li>
+</ul>
+<p>Diploma thesis title ‘Modification of UV index prediction model’ at
+Laboratory of Atmospheric Physics, Physics Department, Aristotle
+University of Thessaloniki.</p>
+<ul>
+<li><em><strong>Physics bachelor’s degree</strong></em>
+<strong>2010</strong></li>
+</ul>
+<p>Graduation thesis title ‘Monitoring wildfires, from space
+observations in worldwide scale’ at Laboratory of Atmospheric Physics,
+Physics Department, Aristotle University of Thessaloniki.</p>
+</div>
+<div id="articles" class="section level2">
+<h2>Articles</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Natsis, A. N.</strong>, Bais, A., &amp; Meleti, C.
+(2024). Analysis of cloud enhancement events in a 30-year record of
+global solar irradiance at Thessaloniki, Greece. <em>Atmospheric
+Research</em>, <em>312</em>, 107731. <a
+href="https://doi.org/10.1016/j.atmosres.2024.107731"
+class="uri">https://doi.org/10.1016/j.atmosres.2024.107731</a></p></li>
+<li><p><strong>Natsis, A.</strong>, Bais, A., &amp; Meleti, C. (2023).
+Trends from 30-year observations of downward solar irradiance in
+Thessaloniki, Greece. <em>Applied Sciences</em>, <em>14</em>(1), 252. <a
+href="https://doi.org/10.3390/app14010252"
+class="uri">https://doi.org/10.3390/app14010252</a></p></li>
+<li><p>Siomos, N., Fountoulakis, I., <strong>Natsis, A.</strong>,
+Drosoglou, T., &amp; Bais, A. (2020). Automated aerosol classification
+from spectral UV measurements using machine learning clustering.
+<em>Remote Sensing</em>, <em>12</em>(6), 965. <a
+href="https://doi.org/10.3390/rs12060965"
+class="uri">https://doi.org/10.3390/rs12060965</a></p></li>
+<li><p>Fountoulakis, I., <strong>Natsis, A.</strong>, Siomos, N.,
+Drosoglou, T., &amp; Bais, A. F. (2019). Deriving aerosol absorption
+properties from solar ultraviolet radiation spectral measurements at
+Thessaloniki, Greece. <em>Remote Sensing</em>, <em>11</em>(18), 2179. <a
+href="https://doi.org/10.3390/rs11182179"
+class="uri">https://doi.org/10.3390/rs11182179</a></p></li>
+</ol>
+</div>
+<div id="conference-presentations-and-publications"
+class="section level2">
+<h2>Conference presentations and publications</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Natsis, A.</strong>, Bais, A., &amp; Meleti, C. (2024). A
+study of solar irradiance enhancement cases over Thessaloniki, Greece.
+<em>AIP Conference Proceedings</em>, <em>2988</em>, 070002. <a
+href="https://doi.org/10.1063/5.0182992"
+class="uri">https://doi.org/10.1063/5.0182992</a></p></li>
+<li><p>Karanikolas, A., <strong>Natsis, A.</strong>, Fountoulakis, I.,
+Karagkiozidis, D., Meleti, C., Tourpali, K., &amp; Bais, A. (2024). The
+UV index in the 21st century over Thessaloniki, Greece, from
+measurements and simulations in relation to the Montreal protocol.
+<em>AIP Conference Proceedings</em>, <em>2988</em>.</p></li>
+<li><p><strong>Natsis, A.</strong>, Bais, A., Meleti, C., &amp;
+Tourpali, K. (2024). Long-term changes surface solar shortwave
+irradiance at Thessaloniki, Greece under clear-and all-sky conditions.
+<em>AIP Conference Proceedings</em>, <em>2988</em>.</p></li>
+<li><p>Nikolis, D., Karagkiozidis, D., <strong>Natsis, A.</strong>,
+&amp; Bais, A. F. (2024). Cloud screening and characterization of UV/VIS
+spectral radiances for MAX-DOAS observations. <em>AIP Conference
+Proceedings</em>, <em>2988</em>.</p></li>
+<li><p>Trentmann, J., Psiloglou, B., Bais, A., &amp; <strong>Natsis, A.
+</strong>(2024). Evaluation of satellite-derived surface irradiance in
+greece using reference surface measurements. <em>AIP Conference
+Proceedings</em>, <em>2988</em>.</p></li>
+<li><p>Karagkiozidis, D., <strong>Natsis, A.</strong>, &amp; Bais, A.
+(2021, September). Cloud detection methodology based on RGB images
+captured by a low-costground based all-sky camera. <em>Proceedings of
+15th International Conference on Meteorology, Climatology and
+Atmospheric Physics (COMECAP 2021)</em>.</p></li>
+<li><p><strong>Natsis, A.</strong>, &amp; Bais, A. (2021). Investigation
+and validation of climate data timeseries as derived by ERA5 and ERA20c
+models and local observations for Kotili, Kastoria, Greece.
+<em>Proceedings of 15th International Conference on Meteorology,
+Climatology and Atmospheric Physics (COMECAP 2021)</em>, 714–717. <a
+href="https://doi.org/10.5281/zenodo.7702998"
+class="uri">https://doi.org/10.5281/zenodo.7702998</a></p></li>
+<li><p>Siomos, N., Fountoulakis, I., Gkertsi, F., Voudouri, K. A.,
+Michailidis, K., Garane, K., Karagkiozidis, D., Karanikolas, A.,
+<strong>Natsis, A.</strong>, Koukouli M., E., Bais A., F., &amp; Balis,
+D. (2021). A technique to retrieve vertical concentration profiles of
+individual aerosolspecies based on the synergy of lidar and
+spectrophotometer measurements. <em>Proceedings of 15th International
+Conference on Meteorology, Climatology and Atmospheric Physics (COMECAP
+2021)</em>, 1082–1086. <a href="https://doi.org/10.5281/zenodo.7704152"
+class="uri">https://doi.org/10.5281/zenodo.7704152</a></p></li>
+<li><p>Siomos, N., Voudouri, K. A., Michailidis, K., Fountoulakis, I.,
+<strong>Natsis,</strong> A., Karanikolas, A., Garane, K., Bais, A.,
+&amp; Balis, D. (2021, September). Synergy of remote sensing techniques
+for aerosol typing over Thessaloniki. <em>Proceedings of 15th
+International Conference on Meteorology, Climatology and Atmospheric
+Physics (COMECAP 2021)</em>.</p></li>
+<li><p>Siomos, N., Balis, D., Bais, A., Koukouli, M., Garane, K.,
+Voudouri, K. A., Gkertsi, F., <strong>Natsis, A.</strong>,
+Karagkiozidis, D., &amp; Fountoulakis, I. (2020). Towards an algorithm
+for near real time profiling of aerosol species, trace gases, and clouds
+based on the synergy of remote sensing instruments. <em>EPJ Web
+Conf</em>, <em>237</em>, 08023.</p></li>
+<li><p>Voudouri, Kalliopi – Artemis, Giannakaki, E., Komppula, M.,
+Gialitaki, Anna, <strong>Natsis, A</strong>thanasios, &amp; Balis,
+Dimitris. (2020). Monitoring ice crystals clouds: Investigation of the
+lidar depolarization ratios. <em>EPJ Web Conf.</em>, <em>237</em>,
+08013. <a href="https://doi.org/10.1051/epjconf/202023708013"
+class="uri">https://doi.org/10.1051/epjconf/202023708013</a></p></li>
+<li><p>Νικήσιανης, Ν., Πουλής, Γ., <strong>Νάτσης, Α.</strong>,
+Παναγιωτίδης, Σ., Τουλούμης, Κ., Σαρικούδη, Γ., &amp; Γελάνη, Ε. (2019,
+September). Eco-TimeΜachine: 4D περιήγηση στην ιστορία του τοπίου.
+<em>9ου Συνέδριο Του ΜΕΚΔΕ «Όραμα, Σχεδιασμός Και Πολιτικές Για Την
+Ολοκληρωμένη Ανάπτυξη Των Ορεινών Και Απομονωμένων
+Περιοχών»</em>.</p></li>
+<li><p><strong>Natsis, A.</strong>, Fountoulakis, I., Siomos, N.,
+Karagkiozidis, D., Drosoglou, T., Meleti, C., &amp; Bais, A. (2019).
+Retrieval of Aerosol Optical Depth in the UV from a single- and a
+double-monochromator Brewer spectrophotometer in Thessaloniki, Greece.
+<em>European Aerosol Conference</em>.</p></li>
+<li><p>Siomos, N., Fountoulakis, I., <strong>Natsis, A.</strong>,
+Drosoglou, T., &amp; Bais, A. (2019). Temporal variations of the
+predominant aerosol types during a 19-year period in Thessaloniki,
+Greece. <em>European Aerosol Conference</em>.</p></li>
+<li><p>Drosoglou, T., Siomos, N., Fountoulakis, I., A. Voudouri, K.,
+Karagkiozidis, D., <strong>Natsis, A.</strong>, Hendrick, F., Balis, D.,
+Bais Alkiviadis, F., Marinou, E., Amiridis, V., &amp; Roozendael, M. V.
+(2018, October). Aerosol profile retrievals from O4 MAX-DOAS
+observations in thessaloniki, greece, and comparison with data from
+co-located lidar, brewer and CIMEL. <em>EGU General Assembly Conference
+Abstracts</em>. 14th international conference on meteorology,
+climatology and atmospheric physics.</p></li>
+<li><p>Emmanouilidis, A., Fountoulakis, I., Tourpali, K.,
+<strong>Natsis, A.</strong>, Logothetis, I., Bais, A. F., Lakkala, K.,
+&amp; Bock, V. de. (2018, October). Global projections of the solar
+erythemal UV radiation in the 21st century. <em>14th International
+Conference on Meteorology, Climatology and Atmospheric
+Physics</em>.</p></li>
+<li><p>Fountoulakis, I., <strong>Natsis, A.</strong>, Siomos, N.,
+Drosoglou, T., Bais, A., Balis, D., &amp; Kazadzis, S. (2018).
+Measurements of the aerosol single scattering albedo in the UV over
+Thessaloniki, Greece. <em>14th International Conference on Meteorology,
+Climatology and Atmospheric Physics</em>, 802.</p></li>
+<li><p><strong>Natsis, A.</strong>, Fountoulakis, I., Siomos, N.,
+Drosoglou, T., &amp; Bais, A. (2018, October). Twenty years of UV
+aerosol optical depth measurements by a brewer spectrophotometer over
+Thessaloniki. <em>14th International Conference on Meteorology,
+Climatology and Atmospheric Physics</em>.</p></li>
+<li><p>Siomos, N., Fountoulakis, I., <strong>Natsis, A.</strong>,
+Karagiozidis, D., Drosoglou, T., Voudouri, K. A., Bais, A., &amp; Balis,
+D. (2018). Aerosol classification based on the synergy of brewer
+spectrophotometer and sunphotometer measurements. <em>14th International
+Conference on Meteorology, Climatology and Atmospheric Physics</em>. <a
+href="http://comecap2018.%20gr/wp-content/uploads/2019/03/COMECAP-BOA-final-revised.%20pdf">http://comecap2018.
+gr/wp-content/uploads/2019/03/COMECAP-BOA-final-revised.
+pdf</a></p></li>
+<li><p><strong>Natsis, A.</strong>, Koukouli, M., Balis, D., &amp;
+Tourpali, K. (2010). Monitoring of wildfires in the tropics and the
+Mediterranean based on eleven years of the World Fire atlas
+observations. <em>38th COSPAR Scientific Assembly</em>, <em>38</em>,
+5.</p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
