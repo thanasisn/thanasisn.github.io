@@ -15,10 +15,10 @@ weight: 10
 
 ### My informational sites
 
-- Currently offline [Οδηγός χρήσης libRadtran](https://libradtran-guide-thanasisn.netlify.app/)
-- Currently offline [Εγχειρίδιο λειτουργίας ηλιοστάτη](https://lap-tracker-manual-thanasisn.netlify.app/)
-- Currently offline [Linux deployment notes](https://deploy-notes-thanasisn.netlify.app/) **WIP**
-- Currently offline [Μετρήσεις με το πυρηλιόμετρο CHP1](https://chp1-measurements-guide-thanasisn.netlify.app/) **WIP**
+- [Οδηγός χρήσης libRadtran](https://thanasisn.github.io/Libratran_guide/Libratran_guide.html){target="_blank"}
+- **Currently offline** [Εγχειρίδιο λειτουργίας ηλιοστάτη](https://lap-tracker-manual-thanasisn.netlify.app/)
+- **Currently offline** [Linux deployment notes](https://deploy-notes-thanasisn.netlify.app/) **WIP**
+- **Currently offline** [Μετρήσεις με το πυρηλιόμετρο CHP1](https://chp1-measurements-guide-thanasisn.netlify.app/) **WIP**
 
 
 ### My presence on the net
