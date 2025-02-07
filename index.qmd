@@ -1,0 +1,34 @@
+---
+# title: "Thanasis N"
+---
+
+
+# Thanasis N {-}
+# Θανάσης Ν {-}
+
+ \
+ \
+ 
+## A personal web page
+
+
+**This is a work in progress.**
+
+Here you can find some results of my work, and some info about me.
+
+  \
+  \
+  \
+  \
+  \
+  
+
+```{r, exec=TRUE, echo=FALSE,results='hide'}
+lastecit <- as.Date(max(file.mtime(list.files(pattern = "\\.md$|\\.Rmd$|\\.qmd$", ignore.case = T, recursive = T))))
+alledits <- head(sort(unique(as.Date(file.mtime(list.files(pattern = "\\.md$|\\.Rmd$|\\.qmd$", ignore.case = T, recursive = T)))),decreasing = T),n = 10)
+```
+
+Last site updates were on:\
+**`r paste(paste(alledits,collapse=",\ "))`**
+
+

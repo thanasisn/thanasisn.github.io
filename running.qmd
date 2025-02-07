@@ -1,0 +1,39 @@
+---
+chapter: false
+title: Running 
+weight: 3
+---
+
+
+List of races on my [advendure.com](http://www.advendure.com/index.php/component/results/index.php/results/?view=myraces&ath_id=825) profile
+
+
+
+| Race name                              | Results  | Date       | Length km | Ascent m | Rank   | C.R.   |
+|----------------------------------------|---------:|-----------:|----------:|---------:|-------:|-------:|
+| Olympus Mythical Trail	             | 25.41.27 | 2022-07-02 |	     102 |	  6.500	| 42/115 | 39/106 |
+| Olympus Mythical Trail                 | 24:30:53 | 2021-07-03 |       102 |    6.500 | 55/128 | 49/116 |
+| Rodopi Ultra Trail                     | 37:40:08 | 2020-10-16 |       174 |    8.000 | 39/171 | 36/162 |
+| Olympus Mythical Trail                 | 21:55:44 | 2020-07-03 |       102 |    6.500 | 40/177 | 38/165 |
+| Olympus Mythical Trail                 | 22:08:46 | 2019-07-05 |       106 |    6.500 | 33/146 | 32/130 |
+| Rodopi Ultra Trail                     | 33:16:40 | 2018-10-19 |       168 |    7.000 | 52/162 | 50/155 |
+| Olympus Mythical Trail                 | 23:47:10 | 2018-06-30 |       100 |    7.000 | 35/139 | 34/130 |
+| Rodopi Ultra Trail                     | 31:32:34 | 2017-10-20 |       164 |    8.000 | 38/165 | 35/152 |
+| Olympus Mythical Trail                 | 24:32:34 | 2017-07-01 |       100 |    6.400 | 49/174 | 46/164 |
+| Rodopi Ultra Trail                     | 30:36:06 | 2016-10-21 |       168 |    8.000 | 28/185 | 25/176 |
+| Olympus Mythical Trail                 | 21:38:30 | 2016-07-01 |       100 |    6.400 | 32/157 | 30/147 |
+| Florina Trail Challenge - Arctos Trail |  4:49:47 | 2016-06-12 |        31 |    2.100 | 12/78  | 11/69  |
+| Rodopi Ultra Trail                     | 29:55:15 | 2015-10-16 |       168 |    8.000 | 14/159 | 14/146 |
+| Olympus Mythical Trail                 | 20:56:31 | 2015-07-04 |       104 |    7.180 | 24/104 | 23/97  |
+| Rodopi Ultra Trail                     | 35:29:38 | 2014-10-17 |       164 |    8.000 | 46/115 | 43/111 |
+| Olympus Mythical Trail                 | 21:33:23 | 2014-07-06 |       104 |    7.180 | 23/91  | 23/88  |
+| Rodopi Ultra Trail                     |  -K-122- | 2013-10-18 |       164 |    8.000 | 59/88  | 55/84  |
+| Zagori Mountain Running 50K            | 7:22:06  | 2013-07-27 |        50 |    3.100 | 77/257 | 73/238 |
+| Olympus Mythical Trail                 |  -K-54-  | 2013-07-06 |       100 |    7.000 | 91/120 | 87/116 |
+| Rodopi Ultra Trail                     | 35:08:54 | 2012-10-19 |       164 |    8.000 | 16/68  | 15/65  |
+| Olympus Mythical Trail                 | 23:03:44 | 2012-07-07 |       100 |    7.000 | 38/141 | 37/133 |
+| Δρόμος Σέιχ Σου                        |  1:18:16 | 2012-05-13 |        16 |      400 | 11/235 | 11/210 |
+| Rodopi Ultra Trail                     | 35:54:00 | 2011-10-21 |       164 |    8.000 | 14/63  | 14/61  |
+| Ορειβατικός Μαραθώνιος Ολύμπου         |  5:43:00 | 2011-09-11 |        38 |    2.400 | 31/263 | 28/244 |
+| Drosopigi Race                         |  1:29:02 | 2011-06-11 |        15 |      450 |  6/42  |  6/39  |
+| Kentavros Ultra Trail                  | 10:06:35 | 2011-05-08 |        67 |    3.500 | 44/138 | 42/131 |

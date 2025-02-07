@@ -1,0 +1,27 @@
+---
+chapter: false
+title:   ""
+tags:    ["resume","work","bio"]
+---
+
+## Education
+
+```{r, results='asis', echo=FALSE, message=FALSE}
+source("~/NOTES/05_CV/vitae/content/tables_en.R")
+for (ii in 1:nrow(education)) {
+  ll <- education[ii, ]
+  cat("* _**",ll$Degree, "**_ ", sep = "")
+  cat(" **", ll$When, "**\n", sep = "")
+  cat("\n")
+  cat(ll$Theme, " at ")
+  cat(ll$Institution, ".", sep = "")
+  cat("\n\n")
+}
+```
+
+
+```{r research_interests, child="~/NOTES/05_CV/vitae/content/articles_en.md", eval=TRUE}
+```
+
+```{r research_interests, child="~/NOTES/05_CV/vitae/content/proccedings_en.md", eval=TRUE}
+```

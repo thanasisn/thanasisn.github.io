@@ -1,0 +1,16 @@
+---
+chapter: false
+title:   Codding
+weight: 10
+---
+
+
+I do data processing mainly with [R](https://www.r-project.org/).
+
+I use [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) more than I should, to glue everything together.
+
+Occasionally will use [python]().
+
+I have used [julia](), [c++](), [octave](), [idl](), [fortran]().
+
+My main environment is [Debian]() and I may migrate to [nixOS]() someday.

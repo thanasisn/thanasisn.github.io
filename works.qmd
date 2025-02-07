@@ -1,0 +1,90 @@
+---
+chapter: false
+title:   Works
+weight:  2
+---
+
+
+My [Google Scholar profile](https://scholar.google.com/citations?&user=Eadj2xEAAAAJ) probably is more up to date.
+
+
+
+
+## Articles
+
+_[Automated aerosol classification from spectral UV measurements using machine learning clustering.](https://www.mdpi.com/2072-4292/12/6/965)_\
+Siomos N., Fountoulakis I., **Natsis A.**, Drosoglou T., Bais A.F. Remote Sens. 2020, 12, 965.
+
+
+_[Deriving Aerosol Absorption Properties from Solar Ultraviolet Radiation Spectral Measurements at Thessaloniki, Greece.](https://www.mdpi.com/2072-4292/11/18/2179)_\
+Fountoulakis I., **Natsis A.**, Siomos N., Drosoglou T., Bais A.F. Remote Sens. 2019, 11, 2179.
+
+
+
+## Conferences
+
+_**Retrieval of Aerosol Optical Depth in the UV from a single- and a double-monochromator Brewer spectrophotometer in Thessaloniki, Greece.**_\
+Athanasios Natsis, Ilias Fountoulakis, Nikolaos Siomos, Dimitrios Karagkiozidis, Theano Drosoglou, Charikleia Meleti and Alkiviadis Bais. EAC 2019. [Article](https://drive.google.com/file/d/1l5CltpYaf-NM3kCDJB30qJag8MRHevsd/view?usp=sharing), [Poster](https://drive.google.com/file/d/1SYSzoVsS_F939jNRXygftk0IWFUHhtQw/view?usp=sharing)
+
+
+_**Aerosol classification based on the synergy of Brewer spectrophotometer and sunphotometer measurements.**_\
+Siomos N., Fountoulakis I, Natsis A, Karagiozidis D., Drosoglou T., Voudouri K. A., Bais A. and Balis D. 
+COMECAP 2018. [Article](https://drive.google.com/file/d/1QspawbRu2rkbQy49dmw_npp1cfJuZ1H5/view?usp=sharing)
+
+
+_**Aerosol profile retrievals from O4 MAX-DOAS observations in Thessaloniki, Greece, and comparison with data from co-located lidar, Brewer and CIMEL.**_\
+Drosoglou T., Siomos N., Fountoulakis I., Voudouri K. A., Karagkiozidis D., Natsis A., Hendrick F., Balis D., Bais A. F., Marinou E., Amiridis V. and Van Roozendael M. 
+COMECAP 2018. [Article](https://drive.google.com/file/d/166gXaOkC5tLUCSBIfjTUNpv6lh9NIXmR/view?usp=sharing)
+
+
+_**Measurements of the aerosol single scattering albedo in the UV over Thessaloniki, Greece.**_\
+Fountoulakis I., Natsis A., Siomos N., Drosoglou T., Bais A., Balis D. and Kazadzis S. 
+COMECAP 2018. [Article](https://drive.google.com/file/d/1IDpReG6vA_rZoQKf2DsHDCmkyyF3aYfv/view?usp=sharing)
+
+
+_**Twenty years of UV aerosol optical depth measurements by a Brewer spectrophotometer over Thessaloniki, Greece.**_\
+Natsis A., Fountoulakis I., Siomos N., Drosoglou Th. and Bais A.
+COMECAP 2018. [Article](https://drive.google.com/file/d/11BMgEXMqetW52F__26o7V6L96BNNscd0/view?usp=sharing), [Presentation](https://drive.google.com/file/d/1fpWdHF2etTj7q3EgYr__-9Kes-ffQB-C/view?usp=sharing)
+
+
+
+## Theses
+
+#### Post Graduate Thesis
+
+_[Τροποποίηση μοντέλου πρόβλεψης του δείκτη υπεριώδους ακτινοβολίας (UV index).](https://drive.google.com/file/d/1zs6h6kg7dYh6DvKZyFrFv0uMLdoL5sxg/view?usp=sharing)_\
+Νάτσης Αθανάσιος. 2014, Θεσσαλονίκη. doi:[10.26262/heal.auth.ir.135806](https://doi.org/10.26262/heal.auth.ir.135806)
+
+
+#### Graduate Thesis
+
+_[Παρακολούθηση πυρκαγιών από δορυφορικές παρατηρήσεις σε παγκόσμια κλίμακα.](https://drive.google.com/file/d/11hSqRP8zVqyQMaf_gI-Y2lM_Aw_ubrVE/view?usp=sharing)_\
+Νάτσης Αθανάσιος. 2010, Θεσσαλονίκη.
+
+
+
+
+## Other presentations
+
+[Investigation of Direct and Global downward sort-wave radiation over Thessaloniki](https://drive.google.com/file/d/1atirpuOSHYcgkiyhUfvwXbpj_kl8WiyS/view?usp=share_link)\
+Laboratory of Atmospheric Physics, Thessaloniki, 2023-01-18
+
+
+[Downscaling WRF forecasts by combining observations and 'Support vector machines'.](https://drive.google.com/file/d/1BA2KXHUzHJZH0fTVr9RkHoSAPJTc8sDZ/view?usp=sharing)\
+Laboratory of Atmospheric Physics, Thessaloniki, 2022-02-09
+
+
+[Evaluation of solar irradiance azimuthal dependence over Thessaloniki.](https://drive.google.com/file/d/1IV11MxLJkxdVroX_jVCjUcknsqelbfw0/view?usp=sharing)\
+Laboratory of Atmospheric Physics, Thessaloniki, 2021-01-07
+
+
+[Μελέτη και μοντελοποίηση ηλιακής ακτινοβολίας στη Θεσσαλονίκη.](https://drive.google.com/file/d/1cVyLH9NYaP1JYxYNHzTPo5lkmcKdC9mW/view?usp=sharing)\
+Laboratory of Atmospheric Physics, Thessaloniki, 2019-11-19
+
+
+
+
+
+
+
+## Projects

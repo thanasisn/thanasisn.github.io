@@ -1,0 +1,45 @@
+project:
+  type: website
+
+website:
+  title: "Thanasis N"
+  navbar:
+    search: true
+    left:
+      # - icon: fa-home
+        # href: index.qmd
+      - text: "Data display"
+        icon: fa-chart-line
+        href: data_display.qmd
+      - text: "Me and my work"
+        icon: fa-person
+        href: me_work.qmd
+      - text: "Interests"
+        icon: fa-fire
+        menu:
+          - text: "Codding"
+            href: codding.qmd
+          - text: "Running"
+            href: running.qmd
+      - text: "on the web"
+        icon: fa-globe
+        href: links.qmd
+      - text: "Documents"
+        menu:
+          - text: "Libratran guide"
+            icon: fa-globe
+            href: Libratran_guide/Libratran_guide.html
+            target: _blank
+
+
+format:
+  html:
+    theme:
+      dark:  darkly
+      light: lumen
+    css: styles.css
+    toc: true
+
+resources:
+  - "Libratran_guide"
+

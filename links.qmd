@@ -1,0 +1,28 @@
+---
+chapter: false
+title: Links
+weight: 10
+---
+
+
+### Profiles on other sites
+
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=Eadj2xEAAAAJ)
+- [ORCiD](https://orcid.org/0000-0002-5199-4119)
+- [github](https://github.com/thanasisn)
+- [wikiloc](https://www.wikiloc.com/wikiloc/user.do?id=3060792)
+
+
+### My informational sites
+
+- Currently offline [Οδηγός χρήσης libRadtran](https://libradtran-guide-thanasisn.netlify.app/)
+- Currently offline [Εγχειρίδιο λειτουργίας ηλιοστάτη](https://lap-tracker-manual-thanasisn.netlify.app/)
+- Currently offline [Linux deployment notes](https://deploy-notes-thanasisn.netlify.app/) **WIP**
+- Currently offline [Μετρήσεις με το πυρηλιόμετρο CHP1](https://chp1-measurements-guide-thanasisn.netlify.app/) **WIP**
+
+
+### My presence on the net
+
+- [relentlessmotion blog](https://relentlessmotion.blogspot.com/):
+   Υπεραποστάσεις, βουνό και προπόνηση.
+- [An old programing blog](https://programmingandmorestuff.blogspot.com/)

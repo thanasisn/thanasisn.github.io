@@ -1,0 +1,119 @@
+---
+chapter: false
+title:   "Data display"
+weight:  1
+tags:    ["research","aerosols","data","solar radiation","Thessaloniki"]
+---
+
+Here is the output of some of my projects.
+
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <h4 class="alert-heading">Warning!</h4>
+  <p class="mb-0">These files may be slow to load, with thousands of pages. They live in a Google Drive, they are produced periodically and can change at any time.</p>
+</div>
+
+
+Source code of the `BBand_LAP`: 
+[github.com/thanasisn/BBand_LAP](https://github.com/thanasisn/BBand_LAP){target="_blank"}
+
+Here are all the reports monitoring the data processing of `BBand_LAP`:
+
+#### [Data processing reports <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1sTGQh_Qj9S5hZspmjMWauI61TsDRH__N?usp=share_link){target="_blank"}
+
+
+
+## Clear sky identification
+
+Plots of clear sky identification (CSid) algorithm results. Include both DNI and GHI, but the characterization is based only on GHI (v14.2):
+
+#### [CSid plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1F7srZ6BZcwWSvfoupu3OE__KHTRwGgm9){target="_blank"}
+
+
+
+## GHI, global horizontal solar radiation
+
+Data from a CM-21 pyranometer.
+
+Plots of the CM-21 pyranometer raw signal:
+
+#### [CM-21 signal plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1aleho2SRx9EsDUqcvLs0Ti6Hb-aGLYIf){target="_blank"}
+
+
+Plots of the GHI from the CM-21 pyranometer:
+
+#### [CM-21 global radiation plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1d23PlFMCE7Qyp1MaqJk-X7Np3Wm-x3iJ?usp=share_link){target="_blank"}
+
+
+
+![CM-21 view over the city](images/20220222_091614.jpg){width=40%}
+
+
+
+## DNI, direct normal solar radiation
+
+Data from a CHP-1 pyrheliometer.
+
+Plots of the CHP-1 pyrheliometer raw signal:
+
+#### [CHP-1 signal plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1lLCOqaUZDh8yw79PgF41qYFmfKCiBYiN?usp=share_link){target="_blank"}
+
+
+Plots of the DNI from the CHP-1 pyrheliometer:
+
+#### [CHP-1 direct irradiance plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1UT0ZYgldobkxFD0gsr0tnIsUhRf78qrl?usp=share_link){target="_blank"}
+
+
+```{r  chp1tracking, echo=FALSE, fig.cap="CHP-1 tracking the Sun", out.width="40%", fig.align = 'center'}
+knitr::include_graphics("images/20220221_115242.jpg")
+```
+
+
+
+
+## Broad-band signals plots
+
+Plots of the recorded signal of each of the 8 channels/instruments.
+Each line is "free floating" in the figure, so there are no values on the y-axis.
+These data are un-managed and the plots may be incomplete. 
+They are intended only for the acquisition process monitoring.
+
+#### [All broadband plots <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/1_GADan6HSHO2JAbkKzwRYwwloJ5T_27z){target="_blank"}
+
+
+
+
+
+
+
+## LAP weather station
+
+_contact: **natsisphysicist@gmail.com**_
+
+All files should be uploaded daily.
+
+- Weather data are RAW!
+- They are not validated!
+- Not quality assured!
+- Read info files!
+
+<!-- TODO add journal -->
+
+#### [Weather data (<i class="fa-brands fa-google"></i>)](https://drive.google.com/drive/folders/13lQedeg1T8b7IEONLHZQdpa38d49H0es){target="_blank"}
+
+
+### Live weather data on external web sites
+
+- [awekas.at](https://www.awekas.at/en/instrument.php?id=17417){target="_blank"}
+- [pwsweather.com](https://www.pwsweather.com/station/pws/LAPAUTH){target="_blank"}
+- [wunderground.com](https://www.wunderground.com/dashboard/pws/ITHESS16){target="_blank"}
+- [metoffice.gov.uk](https://wow.metoffice.gov.uk/observations/details?site_id=cd327036-6920-eb11-8441-0003ff597a64){target="_blank"}
+- [findu.com](http://www.findu.com/cgi-bin/wxpage.cgi?call=FW8640&units=&last=24){target="_blank"}
+
+
+```{r  davis-view, echo=FALSE, fig.cap="Davis installation", out.width="40%", fig.align = 'center'}
+knitr::include_graphics("images/20220218_111232.jpg")
+```
+
+
+
