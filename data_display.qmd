@@ -92,14 +92,14 @@ _contact: **natsisphysicist@gmail.com**_
 
 All files should be uploaded daily.
 
-- Weather data are RAW!
+- Weather data is RAW!
 - They are not validated!
 - Not quality assured!
 - Read info files!
 
 <!-- TODO add journal -->
 
-#### [Weather data (<i class="fa-brands fa-google"></i>)](https://drive.google.com/drive/folders/13lQedeg1T8b7IEONLHZQdpa38d49H0es){target="_blank"}
+#### [Weather data <i class="fa-brands fa-google"></i>](https://drive.google.com/drive/folders/13lQedeg1T8b7IEONLHZQdpa38d49H0es){target="_blank"}
 
 
 ### Live weather data on external web sites
