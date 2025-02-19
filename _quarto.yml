@@ -30,6 +30,10 @@ website:
             icon: fa-globe
             href: Libratran_guide/Libratran_guide.html
             target: _blank
+          - text: "Tracker manual"
+            icon: fa-globe
+            href: Tracker_manual/LAP_tracker_manual.html
+            target: _blank
 
 
 format:
