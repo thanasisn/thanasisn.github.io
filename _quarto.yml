@@ -35,6 +35,9 @@ website:
             href: Tracker_manual/LAP_tracker_manual.html
             target: _blank
 
+resources:
+  - "Libratran_guide"
+  - "Tracker_manual"
 
 format:
   html:
@@ -44,6 +47,4 @@ format:
     css: styles.css
     toc: true
 
-resources:
-  - "Libratran_guide"
 
