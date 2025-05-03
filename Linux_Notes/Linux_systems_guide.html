@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>My notes on Linux systems</title>
+  <meta name="description" content="My notes on Linux systems" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="My notes on Linux systems" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My notes on Linux systems" />
+  
+  
+  
+
+<meta name="author" content="Thanasisn github.com/thanasisn" />
+
+
+<meta name="date" content="2025-05-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My Linux Systems Guide</a></li>
+
+<li class="divider"></li>
+<li><a href="#section"></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#intro"><i class="fa fa-check"></i>Intro</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#backup-your-precious-data"><i class="fa fa-check"></i>Backup your precious data</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#first-approach"><i class="fa fa-check"></i>First approach</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#another-approach"><i class="fa fa-check"></i>Another approach</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#distro-hopping"><i class="fa fa-check"></i>Distro hopping</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#design-and-reasoning"><i class="fa fa-check"></i>Design and reasoning</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#for-building-a-system-i-want"><i class="fa fa-check"></i>For building a system, I want:</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#my-systems-usually-are"><i class="fa fa-check"></i>My systems usually are:</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#current-system-goal"><i class="fa fa-check"></i>Current system goal</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#security-and-privacy"><i class="fa fa-check"></i>Security and privacy</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#system-install"><i class="fa fa-check"></i>System Install</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#the-.iso"><i class="fa fa-check"></i>The <code>.iso</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#partitioning-and-file-system."><i class="fa fa-check"></i>Partitioning and file system.</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#install-the-basics"><i class="fa fa-check"></i>Install the basics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#system-configuration"><i class="fa fa-check"></i>System configuration</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#system-mail-over-gmail-with-postfix"><i class="fa fa-check"></i>System mail over gmail with <code>postfix</code></a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#prepare"><i class="fa fa-check"></i>Prepare</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#install"><i class="fa fa-check"></i>Install</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#configure"><i class="fa fa-check"></i>Configure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#collectd"><i class="fa fa-check"></i><code>collectd</code></a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#install-1"><i class="fa fa-check"></i>Install</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#configure-1"><i class="fa fa-check"></i>Configure</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#starting-the-daemon"><i class="fa fa-check"></i>Starting the daemon</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#ntp"><i class="fa fa-check"></i><code>ntp</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#vpn-network"><i class="fa fa-check"></i>VPN network</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#setup-.sshconfig"><i class="fa fa-check"></i>Setup <code>.ssh/config</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#set-ssh-keys"><i class="fa fa-check"></i>Set <code>ssh</code> keys</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#keep-your-files-and-config-in-sync"><i class="fa fa-check"></i>Keep your files and config in sync</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#install-and-configure-zsh"><i class="fa fa-check"></i>Install and configure <code>zsh</code></a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#change-shell"><i class="fa fa-check"></i>change shell</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#backup"><i class="fa fa-check"></i>System Backup</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#software"><i class="fa fa-check"></i>Software</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#current-scheme"><i class="fa fa-check"></i>Current scheme</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#random-stuff-tricks-and-tools"><i class="fa fa-check"></i>Random stuff, tricks and tools</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#ddresque"><i class="fa fa-check"></i><code>ddresque</code></a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#first-pass"><i class="fa fa-check"></i>First pass</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#second-pass"><i class="fa fa-check"></i>Second pass</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#dd-and-gzip-img-file"><i class="fa fa-check"></i><code>dd</code> and <code>gzip</code> img file</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#dd-disk-to-compressed-image"><i class="fa fa-check"></i><code>dd</code> disk to compressed image</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#dd-compressed-image-to-disk"><i class="fa fa-check"></i><code>dd</code> compressed image to disk</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#polar-pro-trainer-5-and-irda"><i class="fa fa-check"></i>Polar Pro Trainer 5 and IRDA</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#polar-pro-trainer-5"><i class="fa fa-check"></i>Polar Pro Trainer 5</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#setup-irda-probe"><i class="fa fa-check"></i>Setup IRDA probe</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#ocr"><i class="fa fa-check"></i>OCR</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#ocrfeeder"><i class="fa fa-check"></i><code>ocrfeeder</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#gimagereader"><i class="fa fa-check"></i><code>gimagereader</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#ocrmypdf"><i class="fa fa-check"></i><code>ocrmypdf</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#spell-check-word-list"><i class="fa fa-check"></i>Spell check word list</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#mount-physical-hdd-on-a-virtualbox-machine"><i class="fa fa-check"></i>Mount physical HDD on a VirtualBox machine</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#ignore-lid-close-on-laptops"><i class="fa fa-check"></i>Ignore lid close on laptops</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#software-selection-reasoning"><i class="fa fa-check"></i>Software Selection Reasoning</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#mail-client"><i class="fa fa-check"></i>Mail client</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#file-browser"><i class="fa fa-check"></i>File browser</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#general-text-editing"><i class="fa fa-check"></i>General text editing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#commands-i-forget"><i class="fa fa-check"></i>Commands I forget</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#network-monitoring"><i class="fa fa-check"></i>Network monitoring</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#system-monitoring"><i class="fa fa-check"></i>System monitoring</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#testing"><i class="fa fa-check"></i>Testing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#btrfs"><i class="fa fa-check"></i>btrfs</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#break-a-mirror"><i class="fa fa-check"></i>Break a mirror</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#rebalance-to-reduce-unallocated-space"><i class="fa fa-check"></i>Rebalance to reduce unallocated space</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#just-format-two-disks-into-raid1-with"><i class="fa fa-check"></i>Just format two disks into raid1 with:</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#add-new-disk-to-raid1"><i class="fa fa-check"></i>Add new disk to raid1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#zfs"><i class="fa fa-check"></i>zfs</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#from-a-pool-history"><i class="fa fa-check"></i>from a pool history</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My notes on Linux systems</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">My notes on Linux systems</h1>
+<p class="author"><em>Thanasisn <a href="https://github.com/thanasisn">github.com/thanasisn</a></em></p>
+<p class="date"><em>2025-05-03</em></p>
+</div>
+
+<div style="page-break-after: always;"></div>
+<div id="section" class="section level1 unnumbered">
+<h1 class="unnumbered"></h1>
+<p> </p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="https://thanasisn.github.io/Libratran_guide/Libratran_guide.pdf">pdf</a> file</td>
+</tr>
+</tbody>
+</table>
+<p> 
+
+ </p>
+<p> </p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center">This work is licensed under</td>
+</tr>
+<tr class="even">
+<td align="center">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</td>
+</tr>
+<tr class="odd">
+<td align="center"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">creativecommons.org/licenses/by-nc-nd/4.0/</a></td>
+</tr>
+</tbody>
+</table>
+<p> 
+ 
+ </p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center">For correction or contributions contact ThanasisN at <a href="https://github.com/thanasisn">github.com/thanasisn</a>.</td>
+</tr>
+</tbody>
+</table>
+<p> 
+ 
+ </p>
+<p><strong><em>Notice:</em> These notes are for my own use. They are opinionated and may contain
+any kind of errors.</strong></p>
+
+</div>
+<div id="intro" class="section level1 unnumbered hasAnchor">
+<h1>Intro<a href="#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Here I am collecting my notes about deploying GNU/Linux systems. <strong>This is mainly for
+my reference</strong>, for setting up a system with my preferred setup and functionality.
+In general, I am guided by minimal and functional choices. I will go for simple and
+minimal solutions, but will not avoid bloating it, if it is easier, at least for a
+first approach solution. Many times it is easier to start with a GUI for new stuff
+and ditch it later, as you learn more.</p>
+<p>Most stuff are tested and used on “Debian”, but I have an eye for the “NixOS” way.</p>
+<p>This is not trying to be a step by step guide. You can google a thousand tutorials
+for each subject.</p>
+<p>If you find it useful, you can contribute to my coffee addiction, with a donation
+here:
+<img src="bitcoin_1HYsMGP8dSyx484oKmAKS13RYtY832UMSe.png" alt="bitcoin: 1HYsMGP8dSyx484oKmAKS13RYtY832UMSe" /></p>
+<p>A lot of my code lives here: <a href="https://github.com/thanasisn">github.com/thanasisn</a>,
+along with Linux tools and research stuff.</p>
+<p>As Bill<sup>†</sup> used to say …</p>
+<blockquote>
+<p>Before touching the keyboard,
+make a plan and design, what you are going to do with it.</p>
+</blockquote>
+<div id="backup-your-precious-data" class="section level2 hasAnchor">
+<h2>Backup your precious data<a href="#backup-your-precious-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="first-approach" class="section level3 hasAnchor">
+<h3>First approach<a href="#first-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Don’t back up</strong> anything.
+You only live once and your data won’t matter to the Universe.</p>
+</div>
+<div id="another-approach" class="section level3 hasAnchor">
+<h3>Another approach<a href="#another-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="#backup"><strong>Backup everything</strong></a>, your files, your responsibility.</li>
+<li>Verify your backups still work, regularly.</li>
+<li>Get things that you may need from all of your systems.
+<ul>
+<li><code>/etc</code> config files
+<ul>
+<li>/etc/tinc</li>
+<li>/etc/collectd</li>
+<li>/var/lib/ganglia</li>
+<li>/var/lib/collectd</li>
+<li>/var/spool/cron</li>
+</ul></li>
+<li>ssh keys from users</li>
+<li>user profile files <code>.bashrc</code> <code>.history</code> etc.</li>
+<li>lists of installed packages</li>
+<li>other software installed manual</li>
+<li>things that are not in your <code>$HOME</code></li>
+<li>files from ‘root’ user account</li>
+<li>list of libraries from your programming languages</li>
+<li>….</li>
+</ul></li>
+</ul>
+<p>Your backup should be automated, and the configuration collection scripted (<a href="https://github.com/thanasisn/IStillBreakStuff/blob/main/system_backup_tools/system_info.sh">example</a>).</p>
+</div>
+</div>
+<div id="distro-hopping" class="section level2 hasAnchor">
+<h2>Distro hopping<a href="#distro-hopping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Do it, and get over it.
+Use a test machine or a virtual machine to fool around, keep your main machine always available.</p>
+<ul>
+<li>Get you favorite distro. Keep it simple and robust with “Debian or Arch”.</li>
+<li>Prefer net install media. We start with a minimal install and will build up.</li>
+<li>Check if you need firmware. After formatting is not easy to get to the net for answers and software.</li>
+</ul>
+</div>
+<div id="design-and-reasoning" class="section level2 hasAnchor">
+<h2>Design and reasoning<a href="#design-and-reasoning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="for-building-a-system-i-want" class="section level3 hasAnchor">
+<h3>For building a system, I want:<a href="#for-building-a-system-i-want" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<dl>
+<dt>Fast setup:</dt>
+<dd>
+<p>I tend to set up and format secondary machines regularly.</p>
+</dd>
+<dt>Reproducible environments:</dt>
+<dd>
+<p>I like to have the same functionality on any machine I use.</p>
+</dd>
+<dt>Common things:</dt>
+<dd>
+<p>Security, syncing, settings among the hosts.</p>
+</dd>
+<dt>Evolution:</dt>
+<dd>
+<p>The ability, and the opportunity to improve my setups.</p>
+</dd>
+</dl>
+</div>
+<div id="my-systems-usually-are" class="section level3 hasAnchor">
+<h3>My systems usually are:<a href="#my-systems-usually-are" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<dl>
+<dt>Main personal system:</dt>
+<dd>
+<p>A laptop at home, everything starts from here.</p>
+</dd>
+<dt>Desktop system for work:</dt>
+<dd>
+<p>Work horse and backup.</p>
+</dd>
+<dt>Grid/cluster computing account:</dt>
+<dd>
+<p>Configs and programs copied there to increase functionality.</p>
+</dd>
+<dt>Server systems for work:</dt>
+<dd>
+<p>Storage, compute nodes and more.</p>
+</dd>
+<dt>Secondary personal system:</dt>
+<dd>
+<p>A laptop for working outside with extra security.</p>
+</dd>
+<dt>Home server:</dt>
+<dd>
+<p>Mainly backup storage and cloud uploader.</p>
+</dd>
+<dt>Secondary and old machines:</dt>
+<dd>
+<p>Media players, test machines …</p>
+</dd>
+</dl>
+<p>So, these notes help me, and reminds me stuff to keep all this running and happening.</p>
+</div>
+<div id="current-system-goal" class="section level3 hasAnchor">
+<h3>Current system goal<a href="#current-system-goal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<dl>
+<dt><strong>Root on an <code>btrfs</code> with raid 1</strong>:</dt>
+<dd>
+<p>Two disk for redundancy end error correction checking against bit rot. Easier installation on Debian.</p>
+</dd>
+<dt><strong>Home partition on encrypted <code>zfs</code> raid 1</strong>:</dt>
+<dd>
+<p>Redundancy, error checking and safety. Not so safe as with full disk encryption but good enough.
+Now I am using a ‘gocrytpfs’ filesystem on top of a btrfs partition.</p>
+</dd>
+<dt><strong>Auto login on boot without mounting users encrypted home</strong>:</dt>
+<dd>
+<p>So I can ssh from my other machines and act as a honeypot in case of losing it.</p>
+</dd>
+<dt><strong>Manual mounting/unmounting of users encrypted home</strong>:</dt>
+<dd>
+<p>So, I have control of the data exposure. Use a different .ssh/key for the two states, so other application can work normally while encrypted (sync, etc).</p>
+</dd>
+</dl>
+</div>
+<div id="security-and-privacy" class="section level3 hasAnchor">
+<h3>Security and privacy<a href="#security-and-privacy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You should really consider some things about security and privacy.</p>
+<p>Check that: <a href="https://wiki.debian.org/SetupGuides/SecurePersonalComputer">wiki.debian.org/SetupGuides/SecurePersonalComputer</a></p>
+<p>Also you should use email aliases, and <code>pgp</code> encryption, especially when using gmail and similar providers.</p>
+</div>
+</div>
+</div>
+<div id="system-install" class="section level1 hasAnchor">
+<h1>System Install<a href="#system-install" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-.iso" class="section level2 hasAnchor">
+<h2>The <code>.iso</code><a href="#the-.iso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Grub the net installer for your favorite distro.</li>
+<li>Check for firmware dependencies.</li>
+<li>Use the magic of <a href="https://www.ventoy.net/">ventoy.net</a></li>
+</ul>
+</div>
+<div id="partitioning-and-file-system." class="section level2 hasAnchor">
+<h2>Partitioning and file system.<a href="#partitioning-and-file-system." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Think about partitioning and file system you are going to use.</p>
+<ul>
+<li>is a multi-boot?</li>
+<li>want encrypted partitions?</li>
+<li>keep server functioning even with encrypted partition?</li>
+</ul>
+<p>It is easier to set it or prepare it, at system install, especially if you want to make something complex later.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">NAME</span>          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">sda</span>             8:0    0 465.8G  0 disk</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda1</span>          8:1    0   953M  0 part  /boot</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda2</span>          8:2    0     1K  0 part</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda3</span>          8:3    0 421.1G  0 part</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">crypthome</span> 254:0    0   421G  0 crypt /home/athan</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda5</span>          8:5    0    14G  0 part  /</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda6</span>          8:6    0    14G  0 part  /home/arch</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">sda7</span>          8:7    0   1.9G  0 part  [SWAP]</span></code></pre></div>
+<p>Here is my old scheme.
+Dual boot with a spare partition and an encrypted home partition, all on <code>btrfs</code> file system.</p>
+</div>
+<div id="install-the-basics" class="section level2 hasAnchor">
+<h2>Install the basics<a href="#install-the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Install the most basic options your distro provides.</p>
+<ul>
+<li>No desktop environment</li>
+<li>No GUI apps</li>
+</ul>
+<p>Start just with a terminal and an ssh server, and get only the things you need.
+Usually I have a minimal DE like <code>lxde</code> for fail back or guest users, I use <code>dwm</code> as window manager, and mix GUI apps from different desktops.
+Of course the looks of the windows become inconsistent, but you can configure your way out of this if you want.</p>
+<p>I try to purge any program I don’t need or stopped using.</p>
+</div>
+</div>
+<div id="system-configuration" class="section level1 hasAnchor">
+<h1>System configuration<a href="#system-configuration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Mostly based on <code>debian</code>.</p>
+<div id="system-mail-over-gmail-with-postfix" class="section level2 hasAnchor">
+<h2>System mail over gmail with <code>postfix</code><a href="#system-mail-over-gmail-with-postfix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>i.e.
+I couldn’t make <code>exif4</code> work for me</p>
+<div id="prepare" class="section level3 hasAnchor">
+<h3>Prepare<a href="#prepare" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Issue a unique password from <a href="https://myaccount.google.com/apppasswords" class="uri">https://myaccount.google.com/apppasswords</a> to use for each machine.</p>
+</div>
+<div id="install" class="section level3 hasAnchor">
+<h3>Install<a href="#install" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install libsasl2-modules postfix</span></code></pre></div>
+</div>
+<div id="configure" class="section level3 hasAnchor">
+<h3>Configure<a href="#configure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Choose:</p>
+<pre><code>Internet Site</code></pre>
+<p>Edit:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/postfix/main.cf</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="bu">.</span> . . . .</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">## add</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">smtp_use_tls</span> = yes</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">smtp_sasl_auth_enable</span> = yes</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">smtp_sasl_security_options</span> =</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">smtp_sasl_password_maps</span> = hash:/etc/postfix/sasl_passwd</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">smtp_tls_CAfile</span> = /etc/ssl/certs/ca-certificates.crt</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a> <span class="bu">.</span> . . . .</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">## edit</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">relayhost</span> = [smtp.gmail.com]:587</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a> <span class="bu">.</span> . . . .</span></code></pre></div>
+<p>Create password file:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/postfix/sasl_passwd    </span></code></pre></div>
+<pre><code>[smtp.gmail.com]:587    here_is_your_mail@gmail.com:pasw0rd_from_google_app_unique_passwords</code></pre>
+<p>Prepare password for use:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> postmap /etc/postfix/sasl_passwd</span></code></pre></div>
+<p>Edit system aliases:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/aliases</span></code></pre></div>
+<p>Add to whom the mail is going.</p>
+<p>Restart services:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> newaliases</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart postfix</span></code></pre></div>
+</div>
+</div>
+<div id="collectd" class="section level2 hasAnchor">
+<h2><code>collectd</code><a href="#collectd" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I use this to monitor multiple machines, and have graphs of all on my <code>conky</code>.</p>
+<div id="install-1" class="section level3 hasAnchor">
+<h3>Install<a href="#install-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt-get</span> install lm-sensors hddtemp collectd ntp</span></code></pre></div>
+</div>
+<div id="configure-1" class="section level3 hasAnchor">
+<h3>Configure<a href="#configure-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> /lib/systemd/systemd-sysv-install enable hddtemp</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sensors-detect</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim etc/collectd.conf</span></code></pre></div>
+</div>
+<div id="starting-the-daemon" class="section level3 hasAnchor">
+<h3>Starting the daemon<a href="#starting-the-daemon" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You need to restart the daemon.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> /etc/init.d/collectd restart</span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable collectd.service</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart collectd.service</span></code></pre></div>
+<p>For <code>hddtemp</code> have to enable daemon and start service</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> vim /etc/default/hddtemp</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable hddtemp.service</span></code></pre></div>
+</div>
+</div>
+<div id="ntp" class="section level2 hasAnchor">
+<h2><code>ntp</code><a href="#ntp" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Keep your clock in sync</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">## enable</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable ntp</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">## start running</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart ntp</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">## check</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="ex">ntpq</span> <span class="at">-p</span></span></code></pre></div>
+</div>
+<div id="vpn-network" class="section level2 hasAnchor">
+<h2>VPN network<a href="#vpn-network" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you have more than one machine, <strong>network all devices in a private VPN</strong>.
+I use <code>tinc</code>.</p>
+<p>It is easier if you have available a machine with static IP.
+Otherwise, you can use dynamic DNS services to do that.</p>
+<p>Having all your devices able to talk to each other makes everything easier.
+You can then, easily setup ssh, backup, nfs, file sync and much more.
+You can access hosts even with dynamic IP and behind firewalls and NAT.</p>
+</div>
+<div id="setup-.sshconfig" class="section level2 hasAnchor">
+<h2>Setup <code>.ssh/config</code><a href="#setup-.sshconfig" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the <code>.ssh/config</code> file to add all your hosts and all their IPs public or private.
+This way, you don’t have to write the addresses or give the identity file each time.
+And also, this will work for many other applications that use ssh configuration.</p>
+</div>
+<div id="set-ssh-keys" class="section level2 hasAnchor">
+<h2>Set <code>ssh</code> keys<a href="#set-ssh-keys" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> dsa  </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 600 .ssh/id_dsa </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> .ssh/id_dsa.pub dude@remote.edu:  </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> id_dsa.pub <span class="op">&gt;&gt;</span> .ssh/authorized_keys </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 .ssh     </span></code></pre></div>
+</div>
+<div id="keep-your-files-and-config-in-sync" class="section level2 hasAnchor">
+<h2>Keep your files and config in sync<a href="#keep-your-files-and-config-in-sync" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Using <code>unison</code> to sync config files, so all machines feels the same.</p>
+<p>I select with files are synced based on each machine’s role, work, personal, testing…</p>
+<p>That doesn’t count as backup.
+There are cases that I have messed thing up with it.</p>
+</div>
+<div id="install-and-configure-zsh" class="section level2 hasAnchor">
+<h2>Install and configure <code>zsh</code><a href="#install-and-configure-zsh" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install zsh</span></code></pre></div>
+<p>Get oh-my-zsh from its repo.</p>
+<p><a href="https://github.com/robbyrussell/oh-my-zsh">github.com/robbyrussell/oh-my-zsh</a></p>
+<p>Change default shell</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chsh</span> <span class="at">-s</span> /usr/bin/zsh</span></code></pre></div>
+<div id="change-shell" class="section level3 hasAnchor">
+<h3>change shell<a href="#change-shell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chsh</span> <span class="at">-s</span> /usr/bin/zsh</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="backup" class="section level1 hasAnchor">
+<h1>System Backup<a href="#backup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Your backup should be automated!</strong> human errors and reliability is a constant problem for computers.
+If you think, copying data by hand to a USB drive is a backup, you are wrong.
+<strong>COPYING DATA BY HAND TO A USB DRIVE IS POINTLESS</strong>. It will be lost, neglected and fail at some point, sooner than you expect.</p>
+<p><strong>Testing your backup should also be automated!</strong> You have to know it works, not assume it.</p>
+<p><strong>Constantly log and report on the backup status!</strong> You want to know if your backup has failed, now.
+Not three months before you need it.</p>
+<p>I have a script that shows on <code>conky</code> the status of each backup, and counts how long before was the last successful backup, last warning and last fail.
+Also monitor the size of each as an indication of things going good.
+Color coded on <code>conky</code> so if I see</p>
+<ul>
+<li>white, everything is normal don’t bother to look</li>
+<li>green, something is out of the ordinary but still good</li>
+<li>yellow, a problem has emerged, may be in danger, take action</li>
+<li>red, this is off, consider it not safe</li>
+</ul>
+<div id="software" class="section level2 hasAnchor">
+<h2>Software<a href="#software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Backup programs, I have extensively used for years on multiple machines at the past:</p>
+<ul>
+<li><code>deja-dup</code> too long ago to remember</li>
+<li><code>backintime</code> elementary but good</li>
+<li><code>bacula</code> excellent</li>
+</ul>
+<p>Current program <strong><code>borg</code></strong>.
+Deduplication, encryption, compression, snapshots everything I need and simple.
+Upload the whole backup data to the cloud with <strong><code>rclone</code></strong>.</p>
+<p>Some custom <code>bash</code> scripts on <code>cron</code> do everything, backup, prune, test, upload, report.</p>
+</div>
+<div id="current-scheme" class="section level2 hasAnchor">
+<h2>Current scheme<a href="#current-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Local backup
+<ul>
+<li>One <code>raid</code> 1 array for high frequency sort-term retention (<code>borg</code> stable version)</li>
+<li>One <code>btrfs</code> raid1 array for low frequency midterm retention (<code>borg</code> testing version)</li>
+<li>An external drive for occasional easy portable backup (<code>borg</code> testing version)</li>
+</ul></li>
+<li>Remote backup
+<ul>
+<li>One on a private remote machine (<code>borg</code> stable version)</li>
+</ul></li>
+<li>Cloud
+<ul>
+<li>Sync a backup copy from local to google drives (<code>rclone</code>)</li>
+<li>Sync a new backup copy every month from remote to google drive (<code>rclone</code>)</li>
+</ul></li>
+</ul>
+<p>This is for backing up my personal main machine.
+Occasionally, I have a local backup with <code>borg</code> for some of the secondary machines.
+These include config files or a lot of data, that can be recovered with other means but will take time and bandwidth.</p>
+</div>
+</div>
+<div id="random-stuff-tricks-and-tools" class="section level1 hasAnchor">
+<h1>Random stuff, tricks and tools<a href="#random-stuff-tricks-and-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ddresque" class="section level2 hasAnchor">
+<h2><code>ddresque</code><a href="#ddresque" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Rescue failing partitions to a new disk or to an image file with <code>ddresque</code>.</p>
+<div id="first-pass" class="section level3 hasAnchor">
+<h3>First pass<a href="#first-pass" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Do a “fast” copy ignoring hard problems.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ddrescue</span> <span class="at">-v</span> <span class="at">-f</span> <span class="at">-n</span> <span class="at">-a</span> 5120000 /dev/sda /dev/sdc logfile.log</span></code></pre></div>
+<ul>
+<li>-n keeps <code>ddrescue</code> from “scraping”, that puts a heavy load on the drive trying to rescue the most difficult parts</li>
+<li>-a 5120000 it will skip any area that cannot be copied at a speed of at lest 5 megabytes per second</li>
+<li>logfile.log a file to use, so you can start over from where you left off rather than starting from start</li>
+<li>-f force overwrite of outfile, needed when outfile is not a regular file, but a device or partition</li>
+<li>-v verbose</li>
+</ul>
+</div>
+<div id="second-pass" class="section level3 hasAnchor">
+<h3>Second pass<a href="#second-pass" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Do a more intensive try to copy.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ddrescue</span> <span class="at">-v</span> <span class="at">-f</span> <span class="at">-d</span> <span class="at">-r</span> 3 /dev/sda /dev/sdc logfile.log</span></code></pre></div>
+<ul>
+<li>-d direct disk access</li>
+<li>-r 3 read unrecoverable sectors 3 times</li>
+<li>-f force overwrite of outfile, needed when outfile is not a regular file, but a device or partition</li>
+<li>-v verbose</li>
+</ul>
+</div>
+</div>
+<div id="dd-and-gzip-img-file" class="section level2 hasAnchor">
+<h2><code>dd</code> and <code>gzip</code> img file<a href="#dd-and-gzip-img-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dd-disk-to-compressed-image" class="section level3 hasAnchor">
+<h3><code>dd</code> disk to compressed image<a href="#dd-disk-to-compressed-image" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dd</span> if=/dev/sdx <span class="kw">|</span> <span class="fu">gzip</span> <span class="op">&gt;</span> /path/to/image.gz</span></code></pre></div>
+</div>
+<div id="dd-compressed-image-to-disk" class="section level3 hasAnchor">
+<h3><code>dd</code> compressed image to disk<a href="#dd-compressed-image-to-disk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gzip</span> <span class="at">-dc</span> /path/to/image.gz <span class="kw">|</span> <span class="fu">dd</span> of=/dev/sdx </span></code></pre></div>
+</div>
+</div>
+<div id="polar-pro-trainer-5-and-irda" class="section level2 hasAnchor">
+<h2>Polar Pro Trainer 5 and IRDA<a href="#polar-pro-trainer-5-and-irda" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="polar-pro-trainer-5" class="section level3 hasAnchor">
+<h3>Polar Pro Trainer 5<a href="#polar-pro-trainer-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is a 32 bit program, so we need <code>wine32</code>.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">## install wine</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">--add-architecture</span> i386 <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt update</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install wine32</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">## setup wine</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">WINEARCH</span><span class="op">=</span>win32</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">WINEPREFIX</span><span class="op">=</span>~/.wine32</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="ex">winecfg</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">## run program setup</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="ex">wine</span> setup.exe</span></code></pre></div>
+<p>You can update the program with overwriting newer files.</p>
+</div>
+<div id="setup-irda-probe" class="section level3 hasAnchor">
+<h3>Setup IRDA probe<a href="#setup-irda-probe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install irda-utils </span></code></pre></div>
+<p>For configuring ma-620 there is a bash script: <a href="https://github.com/thanasisn/POLAr/blob/0b486fe0630f4c7f802bf19a65f6befa10397dd9/ma-620_setup.sh">ma-620_setup.sh</a>.</p>
+<p>For polar USB dongle setup</p>
+<div id="etcmodprobe.dirda-utils.conf" class="section level4 hasAnchor">
+<h4><code>/etc/modprobe.d/irda-utils.conf</code><a href="#etcmodprobe.dirda-utils.conf" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> irda0 mcs7780</span></code></pre></div>
+</div>
+<div id="etcdefaultirda-utils" class="section level4 hasAnchor">
+<h4><code>/etc/default/irda-utils</code><a href="#etcdefaultirda-utils" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="va">ENABLE</span><span class="op">=</span><span class="st">&quot;true&quot;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="va">DEVICE</span><span class="op">=</span><span class="st">&quot;irda0&quot;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="va">MAX_BAUD_RATE</span><span class="op">=</span><span class="st">&quot;9600&quot;</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="ocr" class="section level2 hasAnchor">
+<h2>OCR<a href="#ocr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ocrfeeder" class="section level3 hasAnchor">
+<h3><code>ocrfeeder</code><a href="#ocrfeeder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>using <code>tesseract</code></li>
+</ul>
+</div>
+<div id="gimagereader" class="section level3 hasAnchor">
+<h3><code>gimagereader</code><a href="#gimagereader" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>easier and prettier than <code>ocrfeeder</code></li>
+<li>using <code>tesseract</code></li>
+</ul>
+</div>
+<div id="ocrmypdf" class="section level3 hasAnchor">
+<h3><code>ocrmypdf</code><a href="#ocrmypdf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>nice</li>
+<li>CLI</li>
+</ul>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ocrmypdf</span> <span class="at">-l</span> eng+ell <span class="at">--rotate-pages</span> <span class="at">--deskew</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ocrmypdf</span> <span class="at">-l</span> eng+ell <span class="at">--rotate-pages</span> <span class="at">--deskew</span> <span class="at">--clean</span> <span class="at">--remove-background</span></span></code></pre></div>
+<p>Usually I want to use this:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ocrmypdf</span> <span class="at">--jpeg-quality</span> 100 <span class="at">--png-quality</span> 100 <span class="at">--optimize</span> 0 <span class="at">-l</span> eng+ell <span class="at">--rotate-pages</span> <span class="at">--deskew</span> <span class="at">--clean</span></span></code></pre></div>
+<p>Part of man page…</p>
+<pre><code>--optimize {0,1,2,3}
+              Control  how PDF is optimized after processing:
+              0 - do not optimize;
+              1 - do safe, lossless optimizations (default);
+              2 - do some lossy optimizations;
+              3 - do aggressive lossy optimizations (including lossy JBIG2)
+--deskew
+              Deskew each page before performing OCR
+--clean
+              Clean  pages  from  scanning artifacts before performing OCR,
+              and send the cleaned page to OCR, but do not include the 
+              cleaned page in the output</code></pre>
+</div>
+</div>
+<div id="spell-check-word-list" class="section level2 hasAnchor">
+<h2>Spell check word list<a href="#spell-check-word-list" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I hard link all the files of the same language so</p>
+<ul>
+<li>All are updated instantly with new words</li>
+<li>I can remove words or edit all file together</li>
+<li>Use common dict for all programs</li>
+</ul>
+<p>Found linked files with: <code>find -L ./ -samefile .vim/spell/el.utf-8.add</code></p>
+<pre><code>./.config/enchant/el.dic
+./.config/enchant/el_GR.dic
+./.hunspell_el_GR
+./.vim/bundle/vim-grammarous/misc/LanguageTool-5.5/org/languagetool/resource/el/hunspell/spelling.txt
+./.vim/spell/el.utf-8.add
+
+./.config/enchant/en.dic
+./.config/enchant/en_GB.dic
+./.config/enchant/en_US.dic
+./.hunspell_en_US
+./.vim/bundle/vim-grammarous/misc/LanguageTool-5.5/org/languagetool/resource/en/hunspell/spelling.txt
+./.vim/spell/en.utf-8.add</code></pre>
+<ul>
+<li>Some programs I use like <code>Rstudio</code> and <code>texstudio</code> are missing.</li>
+<li><code>vim</code> doesn’t add words to the correct language.</li>
+</ul>
+</div>
+<div id="mount-physical-hdd-on-a-virtualbox-machine" class="section level2 hasAnchor">
+<h2>Mount physical HDD on a VirtualBox machine<a href="#mount-physical-hdd-on-a-virtualbox-machine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can do a fast OS installation through a virtual machine on a physical hard drive.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> VBoxManage internalcommands createrawvmdk <span class="at">-filename</span> <span class="st">&quot;/path/to/file.vmdk&quot;</span> <span class="at">-rawdisk</span> /dev/sda</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /dev/sda</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /path/to/file.vmdk </span></code></pre></div>
+</div>
+<div id="ignore-lid-close-on-laptops" class="section level2 hasAnchor">
+<h2>Ignore lid close on laptops<a href="#ignore-lid-close-on-laptops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Edit: <code>/etc/systemd/logind.conf</code></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="va">HandleLidSwitch</span><span class="op">=</span>ignore</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service systemd-logind restart</span></code></pre></div>
+</div>
+</div>
+<div id="software-selection-reasoning" class="section level1 hasAnchor">
+<h1>Software Selection Reasoning<a href="#software-selection-reasoning" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A reminder to myself of which programs I have tried, and why I use them.</p>
+<div id="mail-client" class="section level2 hasAnchor">
+<h2>Mail client<a href="#mail-client" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tested: <code>thunderbird</code>, <code>kontact</code> and <code>evolution</code>.</p>
+<p>I have used them all for a long time with multiple accounts.
+I end up with <code>evolution</code>.
+As long as I have <code>seahorse</code> unlocked everything works fine.
+The other two are good programs but the synchronization of options across machines is not so straightforward.</p>
+</div>
+<div id="file-browser" class="section level2 hasAnchor">
+<h2>File browser<a href="#file-browser" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tested: a bunch of the most prominent.</p>
+<p>End up working with terminal, <code>caja</code> and <code>lf</code>, and occasional <code>dolphin</code> and <code>mc</code>.
+All are mapped to keyboard keys with <code>sxhkd</code>, so I start with the most appropriate, for what I have in mind.</p>
+</div>
+<div id="general-text-editing" class="section level2 hasAnchor">
+<h2>General text editing<a href="#general-text-editing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Nothing beats <code>vim</code>.
+Learn now, thank me later.</p>
+<p>Regularly, I also use <code>kate</code> and sometimes <code>geany</code>.</p>
+</div>
+</div>
+<div id="commands-i-forget" class="section level1 hasAnchor">
+<h1>Commands I forget<a href="#commands-i-forget" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Less often used command that are very handy, but I tend to forget due to infrequent usage.</p>
+<div id="network-monitoring" class="section level2 hasAnchor">
+<h2>Network monitoring<a href="#network-monitoring" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<dl>
+<dt><code>nethogs</code></dt>
+<dd>
+per program network bandwidth monitor
+</dd>
+<dt><code>iftop -i any</code>:</dt>
+<dd>
+per connection bandwidth and volume monitor
+</dd>
+</dl>
+</div>
+<div id="system-monitoring" class="section level2 hasAnchor">
+<h2>System monitoring<a href="#system-monitoring" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<dl>
+<dt><code>htop</code></dt>
+<dd>
+general system monitoring
+</dd>
+<dt><code>bpytop</code></dt>
+<dd>
+general system monitoring/manager
+</dd>
+<dt><code>glances</code></dt>
+<dd>
+general system monitoring
+</dd>
+</dl>
+</div>
+<div id="testing" class="section level2 hasAnchor">
+<h2>Testing<a href="#testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>systemctl enable ssh.service</code></li>
+<li><code>systemctl start ssh.service</code></li>
+<li><code>PasswordAuthentication yes</code></li>
+<li><code>sudo adduser bob</code></li>
+<li><code>sudo passwd</code></li>
+<li><code>vim /etc/hostname</code></li>
+<li><code>vim /etc/hosts</code></li>
+<li><code>visudo</code></li>
+<li><code>sudo vim /etc/lightdm/lightdm.conf</code></li>
+<li><code>sudo apt install tinc</code></li>
+</ul>
+
+</div>
+</div>
+<div id="btrfs" class="section level1 hasAnchor">
+<h1>btrfs<a href="#btrfs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>I use btrfs mostly to it’s flexibility. Mostly when I foresee the need to make
+changes on the partitions or the disks.</p>
+<div id="break-a-mirror" class="section level2 hasAnchor">
+<h2>Break a mirror<a href="#break-a-mirror" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The functionality of <code>btrfs</code> continues to evolve over time. The <code>delete</code> command is
+now an alias for the <code>remove</code> command which produces different results. Today, you
+would run the following commands:</p>
+<pre><code>btrfs balance start -f -sconvert=single -mconvert=single -dconvert=single &lt;mount&gt;
+btrfs device remove &lt;drive&gt; &lt;mount&gt;</code></pre>
+<p>The first command converts all data from a mirrored setup to a single-copy setup.
+This effectively makes the RAID1 into a JBOD setup. The <code>-f</code> option is required to
+tell the filesystem to <em>really</em> reduce the resiliency of the data.</p>
+<p>Once this completes, the second command removes the device from the JBOD. The
+filesystem will move any data from the removed device to the other device.</p>
+</div>
+<div id="rebalance-to-reduce-unallocated-space" class="section level2 hasAnchor">
+<h2>Rebalance to reduce unallocated space<a href="#rebalance-to-reduce-unallocated-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Avoid full balance</p>
+<pre><code> sudo btrfs balalance start -dusage=40 /
+ sudo btrfs balalance start -dusage=25 /media/maindata</code></pre>
+<p>Use for new disk on raid</p>
+<pre><code> sudo btrfs balance start /
+ sudo btrfs balance start /media/maindata</code></pre>
+<p>Watch the balance progress</p>
+<pre><code> sudo watch &quot;btrfs filesystem usage -T /; btrfs balance status /&quot;
+ sudo watch &quot;btrfs filesystem usage -T /media/maindata; btrfs balance status /media/maindata&quot;</code></pre>
+<p>Info on the filesystem</p>
+<pre><code>sudo btrfs device stats /dev/sda4
+sudo btrfs device stats /dev/sda5</code></pre>
+</div>
+<div id="just-format-two-disks-into-raid1-with" class="section level2 hasAnchor">
+<h2>Just format two disks into raid1 with:<a href="#just-format-two-disks-into-raid1-with" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>sudo mkfs.btrfs -m raid1 -d raid1 /dev/sdb /dev/sdc</code></pre>
+</div>
+<div id="add-new-disk-to-raid1" class="section level2 hasAnchor">
+<h2>Add new disk to raid1<a href="#add-new-disk-to-raid1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>List existing file systems</p>
+<pre><code>sudo btrfs filesystem show
+
+Label: &#39;barelfs&#39;  uuid: bd59a77e-a39c-4dad-885c-d956bc67d12b
+    Total devices 1 FS bytes used 1.16TiB
+    devid    1 size 1.77TiB used 1.16TiB path /dev/sdd2</code></pre>
+<p>Add disk to the filesystem</p>
+<pre><code>sudo btrfs device add -f /dev/sde2 /media/barel/</code></pre>
+<p>Start balancing to actually create the raid mirror</p>
+<pre><code>sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /media/barel/</code></pre>
+
+</div>
+</div>
+<div id="zfs" class="section level1 hasAnchor">
+<h1>zfs<a href="#zfs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>I use ZFS mostly for the home folder to use native encryption</p>
+<pre><code>zpool create  -o atime=off -o encryption=on -o keyformat=passphrase poolname drive</code></pre>
+<p>Use native encryption</p>
+<pre><code>zpool create  -O atime=off -O encryption=on -O keyformat=passphrase poolname mirror drive1 drive2 drive3
+
+zpool attach poolname existinghdd newhdd
+
+zpool status poolname
+
+sudo zpool create -f test mirror /home/athan/ZHOST/4G.img /home/athan/ZHOST/3G.img </code></pre>
+<div id="from-a-pool-history" class="section level2 hasAnchor">
+<h2>from a pool history<a href="#from-a-pool-history" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>zpool create maindata raidz1 /dev/sdb3 /dev/sda2
+zfs set atime=off maindata
+zfs create -o encryption=on -o keyformat=passphrase maindata/home_store
+zfs set mountpoint=/home/ maindata/home_store
+zpool import -c /etc/zfs/zpool.cache -aN
+zfs load-key -r maindata/home_store
+zfs create -o mountpoint=/nix maindata/nix_store
+zfs set atime=off maindata
+zpool set autotrim=on maindata
+zfs set xattr=sa maindata
+zpool import -c /etc/zfs/zpool.cache -aN
+zfs load-key -r maindata/home_store</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": false
+  },
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Linux_systems_guide.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  },
+  "number_sections": false
+});
+});
+</script>
+
+</body>
+
+</html>
