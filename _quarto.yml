@@ -34,10 +34,15 @@ website:
             icon: fa-globe
             href: Tracker_manual/LAP_tracker_manual.html
             target: _blank
+          - text: "Linux notes"
+            icon: fa-globe
+            href: Linux_Notes/Linux_systems_guide.html
+            target: _blank
 
 resources:
   - "Libratran_guide"
   - "Tracker_manual"
+  - "Linux_Notes"
 
 format:
   html:
