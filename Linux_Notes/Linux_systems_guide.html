@@ -23,7 +23,7 @@
 <meta name="author" content="Thanasisn github.com/thanasisn" />
 
 
-<meta name="date" content="2025-05-03" />
+<meta name="date" content="2025-05-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,6 +231,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path=""><a href="#system-monitoring"><i class="fa fa-check"></i>System monitoring</a></li>
 <li class="chapter" data-level="" data-path=""><a href="#testing"><i class="fa fa-check"></i>Testing</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#configurations"><i class="fa fa-check"></i>Configurations</a>
+<ul>
 <li class="chapter" data-level="" data-path=""><a href="#btrfs"><i class="fa fa-check"></i>btrfs</a>
 <ul>
 <li class="chapter" data-level="" data-path=""><a href="#break-a-mirror"><i class="fa fa-check"></i>Break a mirror</a></li>
@@ -241,6 +243,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path=""><a href="#zfs"><i class="fa fa-check"></i>zfs</a>
 <ul>
 <li class="chapter" data-level="" data-path=""><a href="#from-a-pool-history"><i class="fa fa-check"></i>from a pool history</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#transparent-encryption-for-a-users-home-folder"><i class="fa fa-check"></i>Transparent Encryption For a User’s Home Folder</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#home-encryption-with-cryptsetup"><i class="fa fa-check"></i>home encryption with <code>cryptsetup</code></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#encrypted-home-directories-ssh-key-authentication"><i class="fa fa-check"></i>Encrypted Home directories + SSH Key Authentication</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#general-usage-notes"><i class="fa fa-check"></i>General usage notes</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#monitor-programs-usage"><i class="fa fa-check"></i>Monitor programs usage</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -265,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">My notes on Linux systems</h1>
 <p class="author"><em>Thanasisn <a href="https://github.com/thanasisn">github.com/thanasisn</a></em></p>
-<p class="date"><em>2025-05-03</em></p>
+<p class="date"><em>2025-05-08</em></p>
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -917,12 +927,16 @@ general system monitoring
 
 </div>
 </div>
-<div id="btrfs" class="section level1 hasAnchor">
-<h1>btrfs<a href="#btrfs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="configurations" class="section level1 hasAnchor">
+<h1>Configurations<a href="#configurations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Some configuration I use regular or have used on the past.</p>
+
+<div id="btrfs" class="section level2 hasAnchor">
+<h2>btrfs<a href="#btrfs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>I use btrfs mostly to it’s flexibility. Mostly when I foresee the need to make
 changes on the partitions or the disks.</p>
-<div id="break-a-mirror" class="section level2 hasAnchor">
-<h2>Break a mirror<a href="#break-a-mirror" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="break-a-mirror" class="section level3 hasAnchor">
+<h3>Break a mirror<a href="#break-a-mirror" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The functionality of <code>btrfs</code> continues to evolve over time. The <code>delete</code> command is
 now an alias for the <code>remove</code> command which produces different results. Today, you
 would run the following commands:</p>
@@ -934,8 +948,8 @@ tell the filesystem to <em>really</em> reduce the resiliency of the data.</p>
 <p>Once this completes, the second command removes the device from the JBOD. The
 filesystem will move any data from the removed device to the other device.</p>
 </div>
-<div id="rebalance-to-reduce-unallocated-space" class="section level2 hasAnchor">
-<h2>Rebalance to reduce unallocated space<a href="#rebalance-to-reduce-unallocated-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rebalance-to-reduce-unallocated-space" class="section level3 hasAnchor">
+<h3>Rebalance to reduce unallocated space<a href="#rebalance-to-reduce-unallocated-space" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Avoid full balance</p>
 <pre><code> sudo btrfs balalance start -dusage=40 /
  sudo btrfs balalance start -dusage=25 /media/maindata</code></pre>
@@ -949,12 +963,12 @@ filesystem will move any data from the removed device to the other device.</p>
 <pre><code>sudo btrfs device stats /dev/sda4
 sudo btrfs device stats /dev/sda5</code></pre>
 </div>
-<div id="just-format-two-disks-into-raid1-with" class="section level2 hasAnchor">
-<h2>Just format two disks into raid1 with:<a href="#just-format-two-disks-into-raid1-with" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="just-format-two-disks-into-raid1-with" class="section level3 hasAnchor">
+<h3>Just format two disks into raid1 with:<a href="#just-format-two-disks-into-raid1-with" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <pre><code>sudo mkfs.btrfs -m raid1 -d raid1 /dev/sdb /dev/sdc</code></pre>
 </div>
-<div id="add-new-disk-to-raid1" class="section level2 hasAnchor">
-<h2>Add new disk to raid1<a href="#add-new-disk-to-raid1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="add-new-disk-to-raid1" class="section level3 hasAnchor">
+<h3>Add new disk to raid1<a href="#add-new-disk-to-raid1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>List existing file systems</p>
 <pre><code>sudo btrfs filesystem show
 
@@ -968,32 +982,133 @@ Label: &#39;barelfs&#39;  uuid: bd59a77e-a39c-4dad-885c-d956bc67d12b
 
 </div>
 </div>
-<div id="zfs" class="section level1 hasAnchor">
-<h1>zfs<a href="#zfs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="zfs" class="section level2 hasAnchor">
+<h2>zfs<a href="#zfs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>I use ZFS mostly for the home folder to use native encryption</p>
-<pre><code>zpool create  -o atime=off -o encryption=on -o keyformat=passphrase poolname drive</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-o</span> atime=off <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase poolname drive</span></code></pre></div>
 <p>Use native encryption</p>
-<pre><code>zpool create  -O atime=off -O encryption=on -O keyformat=passphrase poolname mirror drive1 drive2 drive3
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-O</span> atime=off <span class="at">-O</span> encryption=on <span class="at">-O</span> keyformat=passphrase poolname mirror drive1 drive2 drive3</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> attach poolname existinghdd newhdd</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> status poolname</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> zpool create <span class="at">-f</span> test mirror /home/athan/ZHOST/4G.img /home/athan/ZHOST/3G.img </span></code></pre></div>
+<div id="from-a-pool-history" class="section level3 hasAnchor">
+<h3>from a pool history<a href="#from-a-pool-history" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create maindata raidz1 /dev/sdb3 /dev/sda2</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase maindata/home_store</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set mountpoint=/home/ maindata/home_store</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> mountpoint=/nix maindata/nix_store</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> set autotrim=on maindata</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set xattr=sa maindata</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span></code></pre></div>
 
-zpool attach poolname existinghdd newhdd
+</div>
+</div>
+<div id="transparent-encryption-for-a-users-home-folder" class="section level2 hasAnchor">
+<h2>Transparent Encryption For a User’s Home Folder<a href="#transparent-encryption-for-a-users-home-folder" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>sudo systemctl enable tinc@cosmos</code></p>
+<p>First install the packages ecryptfs-utils and rsync:</p>
+<p><code>sudo apt-get install ecryptfs-utils rsync lsof</code></p>
+<p>Then load the ecryptfs kernel module:</p>
+<p><code>sudo modprobe ecryptfs</code></p>
+<p>And make it permanent in /etc/modules-load.d/modules.conf.</p>
+<p>The user whose home directory you want to encrypt MUST NOT be logged in. For example, you can be logged as root in a tty.</p>
+<p>Then run as root:</p>
+<p><code>ecryptfs-migrate-home -u &lt;username&gt;</code></p>
+<p>When this is done the user must login BEFORE rebooting the computer.</p>
+<p>Assisted Encrypted Swap Partition</p>
+<p>To encrypt the swap partition too:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install cryptsetup</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ecryptfs-setup-swap</span></code></pre></div>
 
-zpool status poolname
+</div>
+<div id="home-encryption-with-cryptsetup" class="section level2 hasAnchor">
+<h2>home encryption with <code>cryptsetup</code><a href="#home-encryption-with-cryptsetup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is viable and similar to using zfs native encryption on a dataset.</p>
+<ul>
+<li><p>user data are encrypted</p></li>
+<li><p>user profile accessible over ssh</p></li>
+<li><p>can crypt/decrypt and mount over ssh</p></li>
+<li><p>other services can ran while encrypted</p></li>
+<li><p>Install repos on partitions</p></li>
+<li><p>use a common partition as <code>/home/</code></p></li>
+<li><p>encrypt partition with cryptsetup</p></li>
+<li><p>create fs in the encrypted side</p></li>
+<li><p>mounted over root <code>/home/</code></p></li>
+<li><p>have some config keys and scripts on both <code>$HOME</code></p></li>
+<li><p>ask to mount cryptsetup when logging in</p></li>
+<li><p>should work also without decrypt/mount for access</p></li>
+<li><p>can even auto login a guest user or <code>$USER</code></p></li>
+<li><p>may link original <code>/home</code> to another location for access</p></li>
+</ul>
 
-sudo zpool create -f test mirror /home/athan/ZHOST/4G.img /home/athan/ZHOST/3G.img </code></pre>
-<div id="from-a-pool-history" class="section level2 hasAnchor">
-<h2>from a pool history<a href="#from-a-pool-history" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<pre><code>zpool create maindata raidz1 /dev/sdb3 /dev/sda2
-zfs set atime=off maindata
-zfs create -o encryption=on -o keyformat=passphrase maindata/home_store
-zfs set mountpoint=/home/ maindata/home_store
-zpool import -c /etc/zfs/zpool.cache -aN
-zfs load-key -r maindata/home_store
-zfs create -o mountpoint=/nix maindata/nix_store
-zfs set atime=off maindata
-zpool set autotrim=on maindata
-zfs set xattr=sa maindata
-zpool import -c /etc/zfs/zpool.cache -aN
-zfs load-key -r maindata/home_store</code></pre>
+</div>
+<div id="encrypted-home-directories-ssh-key-authentication" class="section level2 hasAnchor">
+<h2>Encrypted Home directories + SSH Key Authentication<a href="#encrypted-home-directories-ssh-key-authentication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://stephen.rees-carter.net/tag/howtos">Howtos</a> &amp; <a href="https://stephen.rees-carter.net/tag/bash-encrypted-home-dir-ecryptfs-ssh">bash encrypted-home-dir ecryptfs ssh</a></p>
+<p>This is similar to other other approaches for home encryption. The setup of ssh keys can be also done to the others.</p>
+<p>There is an interesting it-makes-sense-when-you-think-about-it issue with Encrypted Home directories and SSH key authentication I’ve recently discovered in Ubuntu (it will affect any distro though). Since Encrypted home directories aren’t decrypted until the login is successful, and your SSH keys are stored in your home directory, the first SSH connection you make will require a password. If you have password authentication turned off, you’ll have big issues.</p>
+<p>I found a <a href="http://superuser.com/questions/61057/ssh-with-authorized-keys-to-an-ubuntu-system-with-encrypted-homedir">question on Super User</a> which explains solutions to this issue. My solution follows closely <a href="http://superuser.com/a/61074/77950">on this answer</a>, although I have added in a symbolic link to make it easier to manage.</p>
+<ol style="list-style-type: decimal">
+<li>Create .ssh folder in /home for the keys to be stored</li>
+</ol>
+<pre><code> sudo mkdir /home/.ssh </code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Move existing authorized_keys file into .ssh dir as username</li>
+</ol>
+<pre><code> sudo mv ~/.ssh/authorized_keys /home/.ssh/username </code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Create symbolic link to authorized_keys file in user .ssh dir</li>
+</ol>
+<pre><code> ln -s /home/.ssh/username ~/.ssh/authorized_keys </code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Update sshd config file to set the new path for the authorized_keys file</li>
+</ol>
+<pre><code> sudo vim /etc/ssh/sshd_config 
+
+# Change the AuthorizedKeysFile line to:
+ AuthorizedKeysFile /home/.ssh/%u </code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Reboot the computer</li>
+</ol>
+<pre><code> sudo shutdown -r now </code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Login to your server and you should be presented with a minimal un-decrypted home directory… You will need to create and edit a .profile file in there to get ecryptfs to mount your home directory.</li>
+</ol>
+<pre><code> sudo vim ~/.profile 
+Add these lines:
+ ecryptfs-mount-private
+ cd /home/username </code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Log out/Restart, and go back in again. You should be promoted for your password after SSH key auth, and then be presented with your decrypted home directory.</li>
+</ol>
+<p>You should now be able to login using SSH keys every time, no matter if your home dir is decrypted or not :-)</p>
+
+</div>
+</div>
+<div id="general-usage-notes" class="section level1 hasAnchor">
+<h1>General usage notes<a href="#general-usage-notes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+
+<div id="monitor-programs-usage" class="section level2 hasAnchor">
+<h2>Monitor programs usage<a href="#monitor-programs-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://www.cyberciti.biz/tips/howto-log-user-activity-using-process-accounting.html"></a></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install acct      <span class="co"># Install the package</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="ex">accton</span> on             <span class="co"># Enable accounting to /var/log/account/pacct</span></span></code></pre></div>
+<p>Then you can view the commands executed</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span>              <span class="co"># All commands</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span> <span class="at">-u</span> userid    <span class="co"># Processes executed by {userid}</span></span></code></pre></div>
+<p>Summarizes accounting information under Linux</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sa</span></code></pre></div>
+<p>Popularity contest</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install popularity-contest</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> popcon-largest-unused</span></code></pre></div>
 
 </div>
 </div>
