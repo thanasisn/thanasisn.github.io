@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My notes on Linux systems</title>
-  <meta name="description" content="My notes on Linux systems" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <title>Install pyenv on Ubuntu and Debian - bgasparotto</title>
+  <meta name="description" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My notes on Linux systems" />
+  <meta property="og:title" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My notes on Linux systems" />
+  <meta name="twitter:title" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Thanasisn github.com/thanasisn" />
 
 
-<meta name="date" content="2025-05-08" />
+<meta name="date" content="2025-05-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
 
 
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -119,10 +119,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -251,6 +247,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path=""><a href="#general-usage-notes"><i class="fa fa-check"></i>General usage notes</a>
 <ul>
 <li class="chapter" data-level="" data-path=""><a href="#monitor-programs-usage"><i class="fa fa-check"></i>Monitor programs usage</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#git-unusual-usage"><i class="fa fa-check"></i>git unusual usage</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#list-all-files-in-a-repo"><i class="fa fa-check"></i>List all files in a repo</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#remove-a-file-from-the-repo"><i class="fa fa-check"></i>Remove a file from the repo</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#worktrees"><i class="fa fa-check"></i>Worktrees</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#remove-branch"><i class="fa fa-check"></i>Remove branch</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#remove-remote-branch"><i class="fa fa-check"></i>Remove remote branch</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#list-deleted-files-from-repo"><i class="fa fa-check"></i>List deleted files from repo</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#move-from-git-to-git"><i class="fa fa-check"></i>Move from git to git</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#install-pyenv-on-ubuntu-and-debian"><i class="fa fa-check"></i>Install ‘pyenv’ on Ubuntu and Debian</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#install-dependencies"><i class="fa fa-check"></i>Install dependencies</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#install-pyenv"><i class="fa fa-check"></i>Install pyenv</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#validate-installation"><i class="fa fa-check"></i>Validate installation</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#installing-python-versions"><i class="fa fa-check"></i>Installing Python versions</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#install-modules"><i class="fa fa-check"></i>Install modules</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -264,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My notes on Linux systems</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Install pyenv on Ubuntu and Debian - bgasparotto</a>
           </h1>
         </div>
 
@@ -273,9 +287,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">My notes on Linux systems</h1>
+<h1 class="title">Install pyenv on Ubuntu and Debian - bgasparotto</h1>
 <p class="author"><em>Thanasisn <a href="https://github.com/thanasisn">github.com/thanasisn</a></em></p>
-<p class="date"><em>2025-05-08</em></p>
+<p class="date"><em>2025-05-14</em></p>
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -1111,6 +1125,142 @@ Add these lines:
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> popcon-largest-unused</span></code></pre></div>
 
 </div>
+<div id="git-unusual-usage" class="section level2 hasAnchor">
+<h2>git unusual usage<a href="#git-unusual-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="list-all-files-in-a-repo" class="section level3 hasAnchor">
+<h3>List all files in a repo<a href="#list-all-files-in-a-repo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb59"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--pretty</span><span class="op">=</span>format: <span class="at">--name-only</span> <span class="at">--diff-filter</span><span class="op">=</span>A <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span></span></code></pre></div>
+</div>
+<div id="remove-a-file-from-the-repo" class="section level3 hasAnchor">
+<h3>Remove a file from the repo<a href="#remove-a-file-from-the-repo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Will delete history and existing files</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> filter-branch <span class="at">-f</span> <span class="at">--prune-empty</span> <span class="at">--tag-name-filter</span> cat <span class="at">--index-filter</span> <span class="st">&quot;git rm -rf --cached --ignore-unmatch process/Legacy_CHP1_L0_export.knit.md&quot;</span> HEAD</span></code></pre></div>
+</div>
+<div id="worktrees" class="section level3 hasAnchor">
+<h3>Worktrees<a href="#worktrees" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="create-new-worktree" class="section level4 hasAnchor">
+<h4>Create new worktree<a href="#create-new-worktree" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>git worktree add -b test_build ./test</code></pre>
+</div>
+<div id="remove-worktree-folder" class="section level4 hasAnchor">
+<h4>Remove worktree folder<a href="#remove-worktree-folder" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>git worktree remove ./test</code></pre>
+</div>
+</div>
+<div id="remove-branch" class="section level3 hasAnchor">
+<h3>Remove branch<a href="#remove-branch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>git branch --delete test_build</code></pre>
+</div>
+<div id="remove-remote-branch" class="section level3 hasAnchor">
+<h3>Remove remote branch<a href="#remove-remote-branch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>git push origin --delete test_build</code></pre>
+</div>
+<div id="list-deleted-files-from-repo" class="section level3 hasAnchor">
+<h3>List deleted files from repo<a href="#list-deleted-files-from-repo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>git log --diff-filter=D --summary  
+git log --diff-filter=D --summary | grep &quot;delete&quot;</code></pre>
+</div>
+<div id="move-from-git-to-git" class="section level3 hasAnchor">
+<h3>Move from git to git<a href="#move-from-git-to-git" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/" class="uri">http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/</a></p>
+<div id="moving-files-from-one-git-repository-to-another-preserving-history" class="section level4 hasAnchor">
+<h4>Moving Files from one Git Repository to Another, Preserving History<a href="#moving-files-from-one-git-repository-to-another-preserving-history" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If you use multiple git repositories, it’s only a matter of time until you’ll want to refactor some files from one project to another. Today at Pulse we reached the point where it was time to split up a very large repository that was starting to be used for too many different sub-projects.</p>
+<p>After reading some suggested approaches, I spent more time than I would have liked fighting with Git to actually make it happen. In the hopes of helping someone else avoid the same trouble, here’s the solution that ended up working best. The solution is primarily based on ebneter’s excellent question on Stack Overflow.</p>
+<p>Another solution is Linus Torvald’s “The coolest merge, EVER!” Unfortunately, his approach seems to require more manual fiddling than I would like and results in a repository with two roots. I don’t completely understand the implications of this, so I opted for something more like a standard merge.</p>
+</div>
+<div id="goal" class="section level4 hasAnchor">
+<h4>Goal:<a href="#goal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Move directory 1 from Git repository A to Git repository B.</li>
+</ul>
+</div>
+<div id="constraints" class="section level4 hasAnchor">
+<h4>Constraints:<a href="#constraints" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Git repository A contains other directories that we don’t want to move.</li>
+<li>We’d like to</li>
+</ul>
+<p>Preserve the Git commit history for the directory we are moving.</p>
+</div>
+<div id="get-files-ready-for-the-move" class="section level4 hasAnchor">
+<h4>Get files ready for the move:<a href="#get-files-ready-for-the-move" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Make a copy of repository A so you can mess with it without worrying about mistakes too much. It’s also a good idea to delete the link to the original repository to avoid accidentally making any remote changes (line 3). Line 4 is the critical step here. It goes through your history and files, removing anything that is not in directory 1. The result is the contents of directory 1 spewed out into to the base of repository A. You probably want to import these files into repository B within a directory, so move them into one now (lines 5/6). Commit your changes and we’re ready to merge these files into the new repository.</p>
+<pre><code>git clone &lt;git repository A url&gt;
+cd &lt;git repository A directory&gt;
+git remote rm origin
+git filter-branch --subdirectory-filter &lt;directory 1&gt; -- --all
+mkdir &lt;directory 1&gt;
+mv * &lt;directory 1&gt;
+git add .
+git commit</code></pre>
+</div>
+<div id="merge-files-into-new-repository" class="section level4 hasAnchor">
+<h4>Merge files into new repository:<a href="#merge-files-into-new-repository" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Make a copy of repository B if you don’t have one already. On line 3, you’ll create a remote connection to repository A as a branch in repository B. Then simply pull from this branch (containing only the directory you want to move) into repository B. The pull copies both files and history. Note: You can use a merge instead of a pull, but pull worked better for me. Finally, you probably want to clean up a bit by removing the remote connection to repository A. Commit and you’re all set.</p>
+<pre><code>git clone &lt;git repository B url&gt;
+cd &lt;git repository B directory&gt;
+git remote add repo-A-branch &lt;git repository A directory&gt;
+git pull repo-A-branch master --allow-unrelated-histories
+git remote rm repo-A-branch</code></pre>
+
+</div>
+</div>
+</div>
+<div id="install-pyenv-on-ubuntu-and-debian" class="section level2 hasAnchor">
+<h2>Install ‘pyenv’ on Ubuntu and Debian<a href="#install-pyenv-on-ubuntu-and-debian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-dependencies" class="section level3 hasAnchor">
+<h3>Install dependencies<a href="#install-dependencies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb68"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev</span></code></pre></div>
+</div>
+<div id="install-pyenv" class="section level3 hasAnchor">
+<h3>Install pyenv<a href="#install-pyenv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb69"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
+</div>
+<div id="validate-installation" class="section level3 hasAnchor">
+<h3>Validate installation<a href="#validate-installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The command below should print the installed version:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> <span class="at">-v</span></span></code></pre></div>
+<p>which in my case printed:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> 2.1.0</span></code></pre></div>
+<p>If it doesn’t, then add the following lines at the end of your:</p>
+<ul>
+<li><code>.bashrc</code> if you use bash</li>
+<li><code>.zshrc</code> if you use zsh</li>
+</ul>
+<div class="sourceCode" id="cb72"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYENV</span><span class="dt">\_</span>ROOT=<span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.pyenv&quot;</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PYENV</span><span class="st">\_ROOT/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">command</span> <span class="at">-v</span> pyenv <span class="dv">1</span><span class="op">&gt;</span>/dev/null <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a> <span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> init <span class="at">--path</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> virtualenv-init <span class="at">-</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<p>Then reload your shell and it should work.</p>
+</div>
+<div id="installing-python-versions" class="section level3 hasAnchor">
+<h3>Installing Python versions<a href="#installing-python-versions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Run the command below to list the available Python versions to be installed:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install <span class="at">--list</span></span></code></pre></div>
+<p>Which should yield something like:</p>
+<p>Available versions:</p>
+<pre><code>  2.1.3
+  2.2.3
+  ...
+  3.10.0
+  3.10-dev
+  3.11.0a1
+  3.11-dev</code></pre>
+<p>Then, pick a version of your choice and install it running the following command:</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install 3.13.2</span></code></pre></div>
+<p>Finally, set the installed version as the default local (to this terminal session) or global (entire system):</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> local 3.13.2</span></code></pre></div>
+</div>
+<div id="install-modules" class="section level3 hasAnchor">
+<h3>Install modules<a href="#install-modules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After that and maybe after a install <code>pip</code> works</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ephem</span></code></pre></div>
+
+</div>
+</div>
 </div>
             </section>
 
@@ -1132,40 +1282,40 @@ Add these lines:
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": false,
-    "twitter": false,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": false
-  },
-  "fontsettings": {
-    "theme": "night",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": null,
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["Linux_systems_guide.pdf"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  },
-  "number_sections": false
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Linux_systems_guide.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"number_sections": false
 });
 });
 </script>
