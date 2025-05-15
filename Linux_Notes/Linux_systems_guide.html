@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Install pyenv on Ubuntu and Debian - bgasparotto</title>
-  <meta name="description" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <title>My notes on Linux systems</title>
+  <meta name="description" content="My notes on Linux systems" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
+  <meta property="og:title" content="My notes on Linux systems" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Install pyenv on Ubuntu and Debian - bgasparotto" />
+  <meta name="twitter:title" content="My notes on Linux systems" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Thanasisn github.com/thanasisn" />
 
 
-<meta name="date" content="2025-05-14" />
+<meta name="date" content="2025-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
 
 
-<script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -212,7 +216,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path=""><a href="#ocrmypdf"><i class="fa fa-check"></i><code>ocrmypdf</code></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path=""><a href="#spell-check-word-list"><i class="fa fa-check"></i>Spell check word list</a></li>
-<li class="chapter" data-level="" data-path=""><a href="#mount-physical-hdd-on-a-virtualbox-machine"><i class="fa fa-check"></i>Mount physical HDD on a VirtualBox machine</a></li>
 <li class="chapter" data-level="" data-path=""><a href="#ignore-lid-close-on-laptops"><i class="fa fa-check"></i>Ignore lid close on laptops</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path=""><a href="#software-selection-reasoning"><i class="fa fa-check"></i>Software Selection Reasoning</a>
@@ -265,6 +268,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path=""><a href="#installing-python-versions"><i class="fa fa-check"></i>Installing Python versions</a></li>
 <li class="chapter" data-level="" data-path=""><a href="#install-modules"><i class="fa fa-check"></i>Install modules</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#qemu"><i class="fa fa-check"></i>qemu</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#try-a-boot-usb-flash-drive"><i class="fa fa-check"></i>Try a boot usb flash drive</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#shrink-and-compress-virtual-disk-image-in-qemukvm"><i class="fa fa-check"></i>Shrink and compress virtual disk image in Qemu/KVM</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path=""><a href="#virtualbox"><i class="fa fa-check"></i>VirtualBox</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#mount-a-physical-hdd-on-a-virtualbox-machine"><i class="fa fa-check"></i>Mount a physical HDD on a VirtualBox machine</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -278,7 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Install pyenv on Ubuntu and Debian - bgasparotto</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My notes on Linux systems</a>
           </h1>
         </div>
 
@@ -287,9 +299,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Install pyenv on Ubuntu and Debian - bgasparotto</h1>
+<h1 class="title">My notes on Linux systems</h1>
 <p class="author"><em>Thanasisn <a href="https://github.com/thanasisn">github.com/thanasisn</a></em></p>
-<p class="date"><em>2025-05-14</em></p>
+<p class="date"><em>2025-05-15</em></p>
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -356,7 +368,7 @@ along with Linux tools and research stuff.</p>
 <p>As Bill<sup>†</sup> used to say …</p>
 <blockquote>
 <p>Before touching the keyboard,
-make a plan and design, what you are going to do with it.</p>
+make a plan, and design what are you going to do with it.</p>
 </blockquote>
 <div id="backup-your-precious-data" class="section level2 hasAnchor">
 <h2>Backup your precious data<a href="#backup-your-precious-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -851,20 +863,13 @@ These include config files or a lot of data, that can be recovered with other me
 <li><code>vim</code> doesn’t add words to the correct language.</li>
 </ul>
 </div>
-<div id="mount-physical-hdd-on-a-virtualbox-machine" class="section level2 hasAnchor">
-<h2>Mount physical HDD on a VirtualBox machine<a href="#mount-physical-hdd-on-a-virtualbox-machine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can do a fast OS installation through a virtual machine on a physical hard drive.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> VBoxManage internalcommands createrawvmdk <span class="at">-filename</span> <span class="st">&quot;/path/to/file.vmdk&quot;</span> <span class="at">-rawdisk</span> /dev/sda</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /dev/sda</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /path/to/file.vmdk </span></code></pre></div>
-</div>
 <div id="ignore-lid-close-on-laptops" class="section level2 hasAnchor">
 <h2>Ignore lid close on laptops<a href="#ignore-lid-close-on-laptops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Edit: <code>/etc/systemd/logind.conf</code></p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="va">HandleLidSwitch</span><span class="op">=</span>ignore</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span></code></pre></div>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service systemd-logind restart</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="va">HandleLidSwitch</span><span class="op">=</span>ignore</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ex">.........</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service systemd-logind restart</span></code></pre></div>
 </div>
 </div>
 <div id="software-selection-reasoning" class="section level1 hasAnchor">
@@ -999,29 +1004,29 @@ Label: &#39;barelfs&#39;  uuid: bd59a77e-a39c-4dad-885c-d956bc67d12b
 <div id="zfs" class="section level2 hasAnchor">
 <h2>zfs<a href="#zfs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>I use ZFS mostly for the home folder to use native encryption</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-o</span> atime=off <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase poolname drive</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-o</span> atime=off <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase poolname drive</span></code></pre></div>
 <p>Use native encryption</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-O</span> atime=off <span class="at">-O</span> encryption=on <span class="at">-O</span> keyformat=passphrase poolname mirror drive1 drive2 drive3</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> attach poolname existinghdd newhdd</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> status poolname</span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> zpool create <span class="at">-f</span> test mirror /home/athan/ZHOST/4G.img /home/athan/ZHOST/3G.img </span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create  <span class="at">-O</span> atime=off <span class="at">-O</span> encryption=on <span class="at">-O</span> keyformat=passphrase poolname mirror drive1 drive2 drive3</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> attach poolname existinghdd newhdd</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> status poolname</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> zpool create <span class="at">-f</span> test mirror /home/athan/ZHOST/4G.img /home/athan/ZHOST/3G.img </span></code></pre></div>
 <div id="from-a-pool-history" class="section level3 hasAnchor">
 <h3>from a pool history<a href="#from-a-pool-history" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create maindata raidz1 /dev/sdb3 /dev/sda2</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase maindata/home_store</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set mountpoint=/home/ maindata/home_store</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> mountpoint=/nix maindata/nix_store</span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> set autotrim=on maindata</span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set xattr=sa maindata</span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
-<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> create maindata raidz1 /dev/sdb3 /dev/sda2</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> encryption=on <span class="at">-o</span> keyformat=passphrase maindata/home_store</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set mountpoint=/home/ maindata/home_store</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> create <span class="at">-o</span> mountpoint=/nix maindata/nix_store</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set atime=off maindata</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> set autotrim=on maindata</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> set xattr=sa maindata</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="ex">zpool</span> import <span class="at">-c</span> /etc/zfs/zpool.cache <span class="at">-aN</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="ex">zfs</span> load-key <span class="at">-r</span> maindata/home_store</span></code></pre></div>
 
 </div>
 </div>
@@ -1039,8 +1044,8 @@ Label: &#39;barelfs&#39;  uuid: bd59a77e-a39c-4dad-885c-d956bc67d12b
 <p>When this is done the user must login BEFORE rebooting the computer.</p>
 <p>Assisted Encrypted Swap Partition</p>
 <p>To encrypt the swap partition too:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install cryptsetup</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ecryptfs-setup-swap</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install cryptsetup</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ecryptfs-setup-swap</span></code></pre></div>
 
 </div>
 <div id="home-encryption-with-cryptsetup" class="section level2 hasAnchor">
@@ -1113,28 +1118,28 @@ Add these lines:
 <div id="monitor-programs-usage" class="section level2 hasAnchor">
 <h2>Monitor programs usage<a href="#monitor-programs-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://www.cyberciti.biz/tips/howto-log-user-activity-using-process-accounting.html"></a></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install acct      <span class="co"># Install the package</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="ex">accton</span> on             <span class="co"># Enable accounting to /var/log/account/pacct</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install acct      <span class="co"># Install the package</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="ex">accton</span> on             <span class="co"># Enable accounting to /var/log/account/pacct</span></span></code></pre></div>
 <p>Then you can view the commands executed</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span>              <span class="co"># All commands</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span> <span class="at">-u</span> userid    <span class="co"># Processes executed by {userid}</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span>              <span class="co"># All commands</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lastcomm</span> <span class="at">-u</span> userid    <span class="co"># Processes executed by {userid}</span></span></code></pre></div>
 <p>Summarizes accounting information under Linux</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sa</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sa</span></code></pre></div>
 <p>Popularity contest</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install popularity-contest</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> popcon-largest-unused</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install popularity-contest</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> popcon-largest-unused</span></code></pre></div>
 
 </div>
 <div id="git-unusual-usage" class="section level2 hasAnchor">
 <h2>git unusual usage<a href="#git-unusual-usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="list-all-files-in-a-repo" class="section level3 hasAnchor">
 <h3>List all files in a repo<a href="#list-all-files-in-a-repo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb59"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--pretty</span><span class="op">=</span>format: <span class="at">--name-only</span> <span class="at">--diff-filter</span><span class="op">=</span>A <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--pretty</span><span class="op">=</span>format: <span class="at">--name-only</span> <span class="at">--diff-filter</span><span class="op">=</span>A <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span></span></code></pre></div>
 </div>
 <div id="remove-a-file-from-the-repo" class="section level3 hasAnchor">
 <h3>Remove a file from the repo<a href="#remove-a-file-from-the-repo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Will delete history and existing files</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> filter-branch <span class="at">-f</span> <span class="at">--prune-empty</span> <span class="at">--tag-name-filter</span> cat <span class="at">--index-filter</span> <span class="st">&quot;git rm -rf --cached --ignore-unmatch process/Legacy_CHP1_L0_export.knit.md&quot;</span> HEAD</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> filter-branch <span class="at">-f</span> <span class="at">--prune-empty</span> <span class="at">--tag-name-filter</span> cat <span class="at">--index-filter</span> <span class="st">&quot;git rm -rf --cached --ignore-unmatch process/Legacy_CHP1_L0_export.knit.md&quot;</span> HEAD</span></code></pre></div>
 </div>
 <div id="worktrees" class="section level3 hasAnchor">
 <h3>Worktrees<a href="#worktrees" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1211,35 +1216,35 @@ git remote rm repo-A-branch</code></pre>
 <h2>Install ‘pyenv’ on Ubuntu and Debian<a href="#install-pyenv-on-ubuntu-and-debian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="install-dependencies" class="section level3 hasAnchor">
 <h3>Install dependencies<a href="#install-dependencies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb68"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev</span></code></pre></div>
 </div>
 <div id="install-pyenv" class="section level3 hasAnchor">
 <h3>Install pyenv<a href="#install-pyenv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb69"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
 </div>
 <div id="validate-installation" class="section level3 hasAnchor">
 <h3>Validate installation<a href="#validate-installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The command below should print the installed version:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> <span class="at">-v</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> <span class="at">-v</span></span></code></pre></div>
 <p>which in my case printed:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> 2.1.0</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> 2.1.0</span></code></pre></div>
 <p>If it doesn’t, then add the following lines at the end of your:</p>
 <ul>
 <li><code>.bashrc</code> if you use bash</li>
 <li><code>.zshrc</code> if you use zsh</li>
 </ul>
-<div class="sourceCode" id="cb72"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYENV</span><span class="dt">\_</span>ROOT=<span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.pyenv&quot;</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PYENV</span><span class="st">\_ROOT/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">command</span> <span class="at">-v</span> pyenv <span class="dv">1</span><span class="op">&gt;</span>/dev/null <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a> <span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> init <span class="at">--path</span><span class="va">)</span><span class="st">&quot;</span></span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> virtualenv-init <span class="at">-</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYENV_ROOT</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.pyenv&quot;</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PYENV_ROOT</span><span class="st">/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">command</span> <span class="at">-v</span> pyenv <span class="dv">1</span><span class="op">&gt;</span>/dev/null <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> init <span class="at">--path</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">pyenv</span> virtualenv-init <span class="at">-</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>Then reload your shell and it should work.</p>
 </div>
 <div id="installing-python-versions" class="section level3 hasAnchor">
 <h3>Installing Python versions<a href="#installing-python-versions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Run the command below to list the available Python versions to be installed:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install <span class="at">--list</span></span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install <span class="at">--list</span></span></code></pre></div>
 <p>Which should yield something like:</p>
 <p>Available versions:</p>
 <pre><code>  2.1.3
@@ -1250,14 +1255,43 @@ git remote rm repo-A-branch</code></pre>
   3.11.0a1
   3.11-dev</code></pre>
 <p>Then, pick a version of your choice and install it running the following command:</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install 3.13.2</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install 3.13.2</span></code></pre></div>
 <p>Finally, set the installed version as the default local (to this terminal session) or global (entire system):</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> local 3.13.2</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> local 3.13.2</span></code></pre></div>
 </div>
 <div id="install-modules" class="section level3 hasAnchor">
 <h3>Install modules<a href="#install-modules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>After that and maybe after a install <code>pip</code> works</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ephem</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ephem</span></code></pre></div>
+
+</div>
+</div>
+<div id="qemu" class="section level2 hasAnchor">
+<h2>qemu<a href="#qemu" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="try-a-boot-usb-flash-drive" class="section level3 hasAnchor">
+<h3>Try a boot usb flash drive<a href="#try-a-boot-usb-flash-drive" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb77"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> qemu-system-x86_64 <span class="at">-enable-kvm</span> <span class="at">-m</span> <span class="va">$((</span><span class="dv">2</span><span class="op">*</span><span class="dv">1024</span><span class="va">))</span> <span class="at">-drive</span> file=/dev/sdc </span></code></pre></div>
+</div>
+<div id="shrink-and-compress-virtual-disk-image-in-qemukvm" class="section level3 hasAnchor">
+<h3>Shrink and compress virtual disk image in Qemu/KVM<a href="#shrink-and-compress-virtual-disk-image-in-qemukvm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://gist.github.com/nimbosa/09cc3580c1edcb5ede19" class="uri">https://gist.github.com/nimbosa/09cc3580c1edcb5ede19</a></p>
+<p>In order to shrink virtual disk of your virtual machine (process called disk space reclamation) in Qemu/KVM, you can go with following. In your running virtual machine, fill all remaining empty space with zeroes. Then, shut down virtual machine and convert the disk image from original format to the same format (essentially doing nothing). In the process of conversion, Qemu will skip the zeroes and save you some space. You can even add some compression to save even more space.</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="ex">root@vm#</span> dd if=/dev/zero of=/file</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="ex">root@vm#</span> rm /file</span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="ex">root@vm#</span> poweroff</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a><span class="ex">user@host$</span> mv image.qcow2 image.qcow2.bk</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a><span class="ex">user@host$</span> qemu-img convert <span class="at">-p</span> <span class="at">-c</span> <span class="at">-f</span> qcow2 image.qcow2.bk image.qcow2</span></code></pre></div>
+</div>
+</div>
+<div id="virtualbox" class="section level2 hasAnchor">
+<h2>VirtualBox<a href="#virtualbox" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mount-a-physical-hdd-on-a-virtualbox-machine" class="section level3 hasAnchor">
+<h3>Mount a physical HDD on a VirtualBox machine<a href="#mount-a-physical-hdd-on-a-virtualbox-machine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can do a fast OS installation through a virtual machine on a physical hard drive.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> VBoxManage internalcommands createrawvmdk <span class="at">-filename</span> <span class="st">&quot;/path/to/file.vmdk&quot;</span> <span class="at">-rawdisk</span> /dev/sda</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /dev/sda</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 777 /path/to/file.vmdk </span></code></pre></div>
 
 </div>
 </div>
@@ -1282,40 +1316,40 @@ git remote rm repo-A-branch</code></pre>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": false
-},
-"fontsettings": {
-"theme": "night",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Linux_systems_guide.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-},
-"number_sections": false
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": false
+  },
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Linux_systems_guide.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  },
+  "number_sections": false
 });
 });
 </script>
